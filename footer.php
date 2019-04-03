@@ -5,6 +5,8 @@
 		<div class="footer-logo">
 			<div class="logo-wrap">
 				<?php inline_svg('logo') ?>
+				<div class="logo-line"></div>
+				<span>Non-Surgical Rejuvenation</span>
 			</div>
 		</div>
 

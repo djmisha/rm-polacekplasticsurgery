@@ -6513,6 +6513,7 @@ footer {
 }
 
 .upper-footer {
+  max-width: 1400px;
   border-top: 1px solid #7796b6;
   border-bottom: 1px solid #7796b6;
   margin: 0 auto;
@@ -6528,6 +6529,28 @@ footer {
   max-width: 500px;
   -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
           box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+}
+
+.upper-footer .footer-logo span {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+.upper-footer .logo-line {
+  width: 100px;
+  height: 1px;
+  background: #ffffff;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (min-width: 1080px) {
+  .upper-footer .logo-line {
+    margin-left: 210px;
+  }
 }
 
 .upper-footer .logo-wrap {
