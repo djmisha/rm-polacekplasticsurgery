@@ -1,0 +1,131 @@
+/* Naviagation bar */
+
+.nav-bar {
+	z-index: 9998;
+	position: relative;
+	position: fixed;
+	top: 0px;
+	left: 0;
+	right: 0;
+	background: rgba($primaryColor, 1);
+	height: 50px;
+	display: flex;
+	@include media($tablet) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	@include media($desktop) {
+		height: 60px;
+		top: 0px;
+		background: rgba($primaryColor, 0.8);
+	}
+}
+
+.menu-trigger {
+	width: 60px;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	display: block;
+	@include media($desktop) {
+		display: none;
+	}
+	i {
+		position: relative;
+		top: 12px;
+		font-size: 30px;
+		color: $lightColor;
+	}
+	// .menu-is-open & {
+	// 	.fa-bars {
+	// 		display: none;
+	// 	}
+	// }
+	// .fa-window-close {
+	// 	display: none;
+	// }
+	// &.menu-clicked .fa-window-close {
+	// 	display: block !important;
+	// }
+
+}
+
+.nav-bar-extras {
+	height: 100%;
+	right: 0px;
+	width: auto;
+	position: absolute;
+	display:flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	a {
+		text-decoration: none;
+		display: inline-block;
+		height: 100%;
+	}
+	.head-address {
+		width: 60px;
+		margin-right: 5px;
+		background:  rgba($primaryColor, .8); 
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		i {
+			font-size: 25px;
+		}
+	}
+	.head-phone {
+		background:  rgba($primaryColor, .8); 
+
+		padding: 0 20px 0 20px;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center; 
+		font-size: 18px;
+		i {
+			font-size: 25px;
+			margin-right: 10px;
+		}
+	}
+}
+
+
+/* Inside Page Headers */
+
+.int-header {
+	background-color: $secondaryAlt;
+	background-position: center right;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 250px;
+	background-position-y: 50px; 
+
+
+	@include media($tablet) {
+		height: 500px;
+	}
+	@include media($desktop) {
+
+	}
+	@include media($full) {
+		height: 600px;
+	}
+}
+
+.inside-header-logo {
+	float: left;
+	margin-top: 100px;
+	@include media($tablet) {
+		margin-top: 200px;
+	}
+	img {
+		width: 180px;
+		@include media($tablet) {
+			width: auto;
+		}
+	}
+}
+

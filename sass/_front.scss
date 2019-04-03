@@ -1,0 +1,712 @@
+header,
+.welcome,
+footer,
+.home-doctor,
+.home-featured-procedures,
+.home-reviews,
+.home-breast-aug,
+.home-aug-buttons,
+.patient-testis 
+{
+ 	// display: none !important;
+ }
+
+ .home h2 {
+ 	margin: 0;
+ 	font-family: $secondaryFont;
+ 	font-size: 26px;
+ 	margin-bottom: 20px;
+ 	@include media($tablet) {
+ 		margin-bottom: 40px;
+ 		font-size: 40px;
+ 		line-height: 45px;
+ 	}
+ 	@include media($desktop) {
+ 		font-size: 44px;
+ 		line-height: 47px;
+ 	}
+ }
+
+
+
+/*===============================================
+=            Welcome to my Website!             =
+===============================================*/
+
+.welcome-parallax {
+	@include media($desktop) {
+		background: $secondaryColor url("images/bg-welcome.jpg") center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+}
+
+.welcome {
+	background: #f8f8e2 url("images/bg-welcome.jpg") top right no-repeat;
+	background-size: 600px auto;
+	background-position-y: 175px; 
+	z-index: 1000;
+	height: 540px;
+	@include media(500px) {
+		background-size: 750px auto;
+	}
+	@include media($tablet) {
+		padding-top: 0;
+		background: #f8f8e2 url("images/bg-welcome.jpg") top center no-repeat;
+		background-size: 138% auto;
+		height: 550px;
+		max-height: none;
+	}
+
+	@include media($desktop) {
+		background: none;
+		height: 100vh;
+		min-height: 768px;
+	}
+}
+
+.welcome .welcome-cta {
+	margin-top: 50px;
+	text-align: left;
+	@include media($tablet) {
+		margin-top: 0;
+		max-width: 490px;
+		background: none;
+		padding-top: 170px;
+		padding-left: 50px;
+	}
+	@include media($desktop) {
+		max-width: none;
+		padding-top: 35vh;
+		padding-left: 15vw;
+	}
+	a {
+		color: $darkColor;
+		text-decoration: none;
+	}
+	.home-logo {
+		padding-left: 20px;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		margin-bottom: 320px;
+		background: $lightColor;
+		@include media($tablet) {
+			padding: 0;
+			margin-bottom: 0;
+			background: transparent;
+		}
+		h1 {
+			margin: 0 auto;
+			span {
+				display: none;
+			}
+		}
+
+		img {
+			width: 280px;
+			// margin: 0 auto;
+			max-width: 300px;
+			min-height: 130px;
+			@include media($desktop) {
+				min-height: none;
+				max-width: none;
+				width: auto;
+			}
+		}
+	}
+	.home-addy {
+		margin-top: 50px;
+		margin-bottom: 25px;
+		display: none;
+		@include media($tablet) {
+			display: block;
+		}
+	}
+	.button {
+		width: 100%;
+		position: relative;
+		border-radius: 0;
+		@include media($tablet) {
+			border-radius: 4px;
+			max-width: 425px;
+			margin: 0;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: calc(50% + 100px;);
+			top: 12px;
+			background-image: url('images/icon-schedule.png');
+			background-size: 30px 29px;
+			width: 30px;
+			height: 29px;
+			z-index: 1;
+			@include media($tablet) {
+				left: 310px;
+				
+			}
+		}
+		&:hover {
+			background-color: $primaryColor;
+			color: $lightColor !important;
+		}
+	}
+}
+
+
+/*===================================
+=            home-doctor            =
+===================================*/
+
+.home-doctor {
+	background: #d8e1bf;
+	position: relative;
+	text-align: left;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	position: relative;
+
+	@include media($tablet) {
+		padding-top: 60px;
+		padding-bottom: 80px;
+	}
+	@include media($desktop) {
+		background: url("images/bg-doctor.jpg") center center no-repeat;
+		background-position-x: -200px; 
+		background-size: cover;
+		// height: 900px;
+		padding-top: 115px;
+		padding-left: 40%;
+	}
+	@include media($full) {
+		background: url("images/bg-doctor.jpg") center left no-repeat;
+		background-size: cover;
+		padding-bottom: 150px;
+	}
+	h2 {
+		margin-bottom: 20px;
+		@include media($tablet) {
+			margin-bottom: 40px;
+		}
+		@include media($desktop) {
+			max-width: 550px;
+			font-size: 44px;
+			line-height: 47px;
+		}
+	}
+	.doc-content {
+		@include media($desktop) {
+			max-width: 600px;
+		}
+		@include media($full) {
+			
+		}
+		img.doc-image {
+			display: block;
+			float: left; 
+			margin-right: 20px;
+			margin-bottom: 40px;
+			width: 90px;
+			// width: 100%;
+			// max-width: 350px;
+			@include media($tablet) {
+				max-width: none;
+				width: auto;
+				margin-right: 40px;
+				margin-bottom: 40px;
+			}
+			@include media($desktop) {
+				display: none;
+			}
+		}
+	}
+	.button {
+		margin: 0 auto;
+		text-align: center;
+		display: block;
+		max-width: 230px;
+		padding-right: 40px;
+		margin-top: 30px;
+		@include media($desktop) {
+			margin: 0;
+			margin-top: 30px;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			left: calc(50% + 75px;);
+			top: 14px;
+			background-image: url('images/icon-bio.png');
+			background-size: 18px 24px;
+			width: 18px;
+			height: 24px;
+			z-index: 1;
+		}
+		&:hover {
+			background: $primaryColor !important;
+			color: $lightColor !important;
+		}
+	}
+	ul {
+		list-style: none;
+		display: flex;
+		margin-top: 40px;
+		width: 100%;
+		justify-content: center;
+		@include media($tablet) {
+			margin-top: 60px;
+		}
+		@include media($desktop) {
+			margin-bottom: 40px;
+		}
+		@include media($full) {
+			margin-top: 0px;
+			top: 120px;
+			width: 175px;
+			height: 400px;
+			flex-wrap: wrap;
+			justify-content: center;
+			position: absolute;
+			right: calc( 50% - 650px );
+		}
+		li {
+			margin: 0 10px;
+			img {
+				width: 100%;
+				@include media($tablet) {
+					width: auto;
+				}
+			}
+			@include media($full) {
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+
+/*================================================
+=            home-featured-procedures            =
+================================================*/
+
+.home-featured-procedures {
+	background: $darkColor;
+	ul {
+		margin: 0;
+		color: $lightColor;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		@include media($tablet) {
+			flex-wrap: nowrap;
+			justify-content: center;
+		}
+	}
+	li {
+		width: 50%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 100px;
+		padding-bottom: 40px;
+		transition: all .35s ease-in-out;
+		position: relative;
+		@include media($tablet) {
+			padding-left: 40px;
+			padding-right: 40px;
+			padding-top: 300px;
+			padding-bottom: 80px;
+		}
+		@include media($desktop) {
+			padding-bottom: 80px;
+			padding-top: 370px;
+		}
+		@include media($full) {
+			background-size: 110% auto;
+		}
+		a {text-decoration: none;}
+		.the-seth {
+			border-top: 1px solid $lightColor;
+			border-bottom: 1px solid $lightColor;
+			padding: 3px 0px;
+			@include media($tablet) {
+				padding: 7px 0px;
+			}
+		}
+		.the-seth-button {
+			transition: all .35s ease-in-out;
+			display: block;
+			padding: 5px 0px;
+			font-family: $secondaryFont;
+			color: $lightColor;
+			font-size: 20px;
+			z-index: 9999;
+			text-decoration: none;
+			border-radius: 4px;
+			background: transparent;
+			@include media($tablet) {
+				padding: 20px 0px;
+				font-size: 30px;
+			}
+			@include media($desktop) {
+				min-width: 200px;
+			}
+		}
+		.feat-overlay {
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			transition: all .35s ease-in-out;
+			background: rgba( $primaryColor, .6);
+		}
+		&:hover {
+			.the-seth-button {
+				background: $primaryColor;
+			}
+			.feat-overlay {
+				background: transparent;
+			}
+		}
+	}
+}
+
+
+
+
+/*====================================
+=            home-reviews            =
+====================================*/
+
+.home-reviews {
+	text-align: center;
+	padding-top: 40px;	
+	padding-bottom: 60px;
+	@include media($tablet) {
+		padding-top: 75px;	
+		padding-bottom: 100px;
+	}	
+	.the-review {
+		border: 1px solid $primaryColor;
+		padding: 20px;
+		@include media($tablet) {
+			padding: 40px 80px;
+		}
+		.the-stars  {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 25px;
+			@include media($tablet) {
+				font-size: 30px;
+				
+			}
+		}
+	}
+	.fa-star {
+		transition: all .3s ease-in-out;
+	}
+	&:hover {
+		.fa-star {
+			color: orange;
+			margin-right: 3px;
+			margin-left: 3px;
+		}
+	}
+	p {
+		font-family: $secondaryFont;
+		font-size: 18px;
+		line-height: 30px;
+		@include media($tablet) {
+			font-size: 22px;
+			line-height: 44px;
+		}
+	}
+	.button {
+		margin-top: 20px;
+		padding: 10px 50px;
+		&:hover {
+			background: $primaryColor;
+			color: $lightColor !important;
+		}
+		&:before {
+			content: '';
+			width: 0px;
+			height: 0px;
+			border-bottom: 25px solid $primaryColor;
+			border-left: 20px solid rgba(#000, 0);
+			border-right: 20px solid rgba(#000, 0);
+			position: absolute;
+			top: -25px;
+			left: calc( 50% - 20px);
+		}
+	}
+}
+
+
+
+.home-breast-aug {
+	background-size: cover;
+	background:  url('images/bg-home-breast-aug-mobile.jpg');
+	background-position: left top;
+	background-size: 120vw auto;
+	padding-top: 60vw;
+	background-repeat: no-repeat;
+	@include media($desktop) {
+		background: $tertiaryColor url('images/bg-home-breast-aug.jpg');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: cover;
+		padding-top: 0;
+		height: 745px;
+	}
+	position: relative;
+	.home-breast-content {
+		text-align: left;
+		@include media($desktop) {
+			width: 600px;
+			position: absolute;
+			right: calc(50% - 550px;);
+			top: 100px;
+		}
+		@include media($full) {
+			top: 200px;
+			right: calc(50% - 600px;);
+		}
+		z-index: 9999;
+		img {
+			width: 100%;
+			@include media($tablet) {
+				width: auto;
+			}
+		}
+	}
+	h2 {
+		margin-bottom: 20px;
+		@include media($desktop) {
+			margin-bottom: 40px;
+		}
+	}
+}
+
+
+.home-aug-buttons {
+	background: $lightColor;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	margin-bottom: 40px;
+	flex-wrap: wrap;
+	text-align: center;
+	@include media($tablet) {
+		margin-bottom: 0px;
+		flex-wrap: no-wrap;
+		height: 200px;
+	}
+	a {
+		margin-bottom: 20px;
+		display: block; 
+		width: 100%;
+		@include media($tablet) {
+			width: auto;
+			display: inline-block;
+			margin-bottom: 0;
+			margin-right: 20px;
+		}
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+
+
+
+.home-more-procedures {
+	background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
+	background-position-x: -800px; 
+	// background-size: cover;
+	padding-top: 20px;
+	padding-bottom: 60px;
+	min-height: 800px;
+	@include media($tablet) {
+		padding-top: 40px;
+		background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
+		background-size: cover;
+		min-height: 1200px;
+	}
+	@include media($desktop) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	position: relative;
+	.bg-p-overlay {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background: rgba( $primaryColor, .6);
+		top: 0;
+		bottom: 0;
+		left:0;
+		right: 0;
+		background: rgba( #84d3e9, .8);
+		z-index: 0;
+		@include media($tablet) {
+			display: none;
+		}
+	}
+	h2 {
+		z-index: 1;
+		position: relative;
+		margin-top: 0;
+		@include media($desktop) {
+			margin-bottom: 60px;
+		}
+	}
+	h3 {
+		font-family: $secondaryFont;
+		margin-top: 0;
+	}
+	.the-holder {
+		border: 1px solid $primaryColor;
+		position: relative;
+	}
+	.the-slider {
+		position: relative;
+		max-width: 550px;
+		height: 100%;
+		padding: 20px 20px;
+		@include media($tablet) {
+			padding: 60px 50px 60px 80px;
+			background: transparent;
+		}
+		@include media($desktop) {
+		}
+		div {
+			text-align: left;
+			display: block;
+			@include media($desktop) {
+				clear: both;
+				margin-bottom: 60px;
+			}
+		}
+		img {
+			margin-bottom: 20px;
+			@include media($tablet) {
+				float: left;
+				margin-right: 40px;
+			}
+			@include media($desktop) {
+				margin-bottom: 200px;
+			}
+		}
+		&:nth-of-type(even) {
+			margin-bottom: 0 !important;
+		}
+	}
+	
+
+	.carousel-cell {
+	  width: 100%; /* full width */
+	  height: 900px; /* height of carousel */
+	  @include media($desktop) {
+		  height: 860px; /* height of carousel */
+		  // border: 1px solid red;
+		}
+	}
+
+
+	.flickity-button {
+		background: $primaryColor;
+		margin-top: 40px;
+	}
+	.flickity-button:hover {
+	}
+
+	.flickity-prev-next-button {
+		width: 40px;
+		height: 40px;
+		border-radius: 4px;
+	}
+	/* icon color */
+	.flickity-button-icon {
+		fill: white;
+	}
+
+	/* position outside */
+	.flickity-prev-next-button.previous {
+		position: relative;
+		left: -5px;
+	}
+	.flickity-prev-next-button.next {
+		position: relative;
+		right: -5px;
+	}
+	.flickity-page-dots {
+		position: relative;
+		bottom: -10px
+	}
+
+	.button {
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
+}
+
+
+
+
+
+.patient-testis {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include media($tablet) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	h2 {
+		margin-bottom: 40px;
+		@include media($tablet) {
+			margin-bottom: 80px;
+		}
+	}
+
+	ul {
+		list-style: none;
+		@include media($tablet) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+	li {
+		width: 100%;
+		margin-bottom: 60px;
+		@include media($tablet) {
+			margin-bottom: 0px;
+			width: 45%;
+		}
+		font-family: $secondaryFont;
+		text-align: left;
+		font-size: 22px;
+		line-height: 44px;
+	}
+	img {
+		max-width: 120px;
+		margin-bottom: 20px;
+		@include media($tablet) {
+			margin-right: 40px;
+			float: left;
+		}
+	}
+	.button {
+		margin-top: 20px;
+	}
+}
+
+

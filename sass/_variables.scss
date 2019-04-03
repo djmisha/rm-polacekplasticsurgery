@@ -1,0 +1,76 @@
+/* ------------------------
+   Variables
+------------------------ */
+
+$Purple: #3b3f50;
+
+$lightPurple :#5e616e;
+
+$Yellow: #f6e8b4;
+
+$lightYellow: #faf9ec;
+
+$YellowLink: #d4c48f;
+
+$LimeGreen: #d8e1bf;
+
+
+$primaryColor: $Purple; // link color, buttons, nav, footer, etc
+$primaryAlt: $lightPurple; //link hover
+
+$primaryHighlight: $Purple;
+
+$secondaryColor: $Yellow;
+$secondaryAlt: $lightYellow;
+
+$tertiaryColor: $LimeGreen;
+$tertiaryAlt: #000;
+
+$lightColor: #ffffff;
+$darkColor: $Purple;
+
+// Font Family
+
+$primaryFont: "Open Sans", sans-serif;
+$secondaryFont: orpheuspro, serif;
+$highlightFont: vollkorn, serif;
+
+// $fourthFont: "Source Sans Pro", sans-serif;
+
+$sidebar: 308px;
+
+// Font Weight
+
+$thin: 100;
+$light: 300;
+$normal: 400;
+$regular: 400;
+$medium: 500;
+$semiBold: 600;
+$bold: 700;
+$extraBold: 800;
+$heavy: 900;
+
+// Media Query break points
+
+$tablet: 768px;
+$desktop: 1080px;
+$full: 1480px;
+
+$ipad-min: 768px;
+$ipad-max: 1024px;
+
+$ipadpro-min: 1024px;
+$ipadpro-max: 1366px;
+
+$ipad: ipads;
+$ipads: ipads;
+
+// Increasing color
+
+$step: 1;
+
+// Defaults
+
+$defaultfont: $primaryFont;
+$defaultcolor: $darkColor;
