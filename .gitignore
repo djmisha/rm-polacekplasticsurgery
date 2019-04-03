@@ -1,4 +1,5 @@
 .DS_Store
 /fonts/
 /acf-json/
-/none_modules/
+/node_modules/
+/images/
