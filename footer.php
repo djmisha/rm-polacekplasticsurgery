@@ -1,16 +1,14 @@
 
 <footer>
-	<!-- <div class="footer-cta">
-		<span>Schedule Your <br>Confidential Plastic Surgery Consultation</span>
-	</div>
-	<section class="upper-footer will-parallax parallax-footer">
-		<div class="mobile-image">
-			<img src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg" alt="logo">
+	
+	<section class="upper-footer">
+		<div class="footer-logo">
+			<div class="logo-wrap">
+				<?php inline_svg('logo') ?>
+			</div>
 		</div>
-		<div class="footer-contact-form">
-			<?php echo do_shortcode('[seaforms name="contact-us"]'); ?>
-		</div>
-		<div class="footer-address" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/icon-map.png');">
+
+		<!-- <div class="footer-address" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/icon-map.png');">
 			<img src="<?php bloginfo('template_directory'); ?>/images/logo-footer.png" alt="logo">
 			<?php if(have_rows('locations', 'option')): ?>
 				<?php while(have_rows('locations', 'option')): the_row(); ?>
@@ -29,21 +27,16 @@
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
+
+		<div class="map-image">
+			<img src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg" alt="map">
 		</div>
-		<div class="footer-social">
-			<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
-			<a href="<?php the_field('youtube','options'); ?>" target="_blank" rel="noopener" title="youtube"><i class="fab fa-youtube"></i></a>
-			<a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
-			<a href="<?php the_field('pinterest','options'); ?>" target="_blank" rel="noopener" title="pinterest"><i class="fab fa-pinterest"></i></a>
-			<a href="<?php the_field('google','options'); ?>" target="_blank" rel="noopener" title="google"><i class="fab fa-google"></i></a>
-		</div>
-	</section> -->
+
+		</div> -->
+		
+	</section> 
 	
 	<section class="lower-footer">
-		<!-- <div class="footer-buttons">
-			<a href="<?php the_field('gallery_footer_link', 'option'); ?>">Results Gallery</a>
-			<a href="<?php the_field('reviews_footer_link', 'option'); ?>">Patient Reviews</a>
-		</div>	 -->	
 		<div class="model-disc">
 			<p>Stock model images are used throughout this website and are for illustrative purposes only. All before-and-after photos and patient testimonials on our site are from actual patients, and have been published with permission. Individual results may vary.</p>
 		</div>
@@ -61,7 +54,6 @@
 			<?php endif; ?>
 		</div>
 	</section>  
-
 
 </footer>
 

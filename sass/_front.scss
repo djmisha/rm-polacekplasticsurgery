@@ -1,6 +1,6 @@
 header,
 .welcome,
-footer,
+// footer,
 .home-doctor,
 .home-featured-procedures,
 .home-reviews,
@@ -8,7 +8,7 @@ footer,
 .home-aug-buttons,
 .patient-testis 
 {
- 	// display: none !important;
+ 	display: none !important;
  }
 
  .home h2 {
@@ -35,7 +35,7 @@ footer,
 
 .welcome-parallax {
 	@include media($desktop) {
-		background: $secondaryColor url("images/bg-welcome.jpg") center center;
+		background: $primaryColor url("images/bg-welcome.jpg") center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}

@@ -2,23 +2,25 @@
    Variables
 ------------------------ */
 
-$Purple: #3b3f50;
+$DarkBlue: #424a4f;
 
-$lightPurple :#5e616e;
+$MiddleBlue : #7796b6;
 
-$Yellow: #f6e8b4;
+$lightBlue :#dce4ea;
 
-$lightYellow: #faf9ec;
+$Yellow: #e1ab4c;
+
+$lightYellow: #d7b777;
 
 $YellowLink: #d4c48f;
 
 $LimeGreen: #d8e1bf;
 
 
-$primaryColor: $Purple; // link color, buttons, nav, footer, etc
-$primaryAlt: $lightPurple; //link hover
+$primaryColor: $DarkBlue; // link color, buttons, nav, footer, etc
+$primaryAlt: $lightBlue; //link hover
 
-$primaryHighlight: $Purple;
+$primaryHighlight: $MiddleBlue;
 
 $secondaryColor: $Yellow;
 $secondaryAlt: $lightYellow;
@@ -27,17 +29,16 @@ $tertiaryColor: $LimeGreen;
 $tertiaryAlt: #000;
 
 $lightColor: #ffffff;
-$darkColor: $Purple;
+$darkColor: $DarkBlue;
 
 // Font Family
 
-$primaryFont: "Open Sans", sans-serif;
-$secondaryFont: orpheuspro, serif;
-$highlightFont: vollkorn, serif;
+$primaryFont: 'Lato', sans-serif;
+$secondaryFont: 'Playfair Display', serif;;
+$highlightFont:  'Lato', sans-serif;
 
-// $fourthFont: "Source Sans Pro", sans-serif;
 
-$sidebar: 308px;
+$sidebar: 350px;
 
 // Font Weight
 

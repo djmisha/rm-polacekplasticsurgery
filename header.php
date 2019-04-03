@@ -9,8 +9,7 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Open+Sans:400,600' ); ?>
-		<link rel="stylesheet" href="https://use.typekit.net/uzs6owq.css">
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700i' ); ?>
 	<?php endif; ?>
 
 	<?php wp_head()?>

@@ -10,159 +10,42 @@
 	display: none;
 }
 
-.footer-cta {
-	background: $primaryColor;
-	display: block;
-	width: 100%;
-	text-align: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	padding-top: 40px;
-	@include media($tablet) {
-		padding-top: 0px;
-		height: 200px;
-		position: relative;
-		&:before {
-			content: '';
-			width: 0px;
-			height: 0px;
-			border-top: 25px solid $primaryColor;
-			border-left: 20px solid rgba(#000, 0);
-			border-right: 20px solid rgba(#000, 0);
-			position: absolute;
-			bottom: -25px;
-			left: calc( 50% - 10px);
-		}
-	}
-	@include media($desktop) {
-		height: 250px;
-	}
-	span {
-		font-size: 34px;
-		line-height: 36px;
-		font-family: $secondaryFont;
-		color: $lightColor;
-		@include media($tablet) {
-			font-size: 45px;
-			line-height: 48px;
-		}
-	}
+footer {
+	padding-top: 70px;
+	background: $primaryAlt;
 }
-
 .upper-footer {
-	background: $primaryColor;
+	border-top: 1px solid $primaryHighlight;
+	border-bottom: 1px solid $primaryHighlight;
+	margin: 0 auto;
 	padding-top: 40px;
 	padding-bottom: 40px;
-	display: flex;
-	flex-wrap: wrap;
 
-	@include media($tablet) {
-		background: $primaryColor url("images/bg-footer.jpg") center center no-repeat;
-		background-size: cover;
-		padding-top: 170px;
-		padding-bottom: 80px;
-		display: flex;
-		flex-wrap: no-wrap;
-		justify-content: space-between;
-
+	.footer-logo {
+		border: 1px solid rgba($lightColor, .3);
+		padding: 18px;
+		width: auto;
+		background: $primaryHighlight;
+		max-width: 500px;
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
 	}
 
-	> div {
-		@include media($tablet) {
-			width: 44%;
-			text-align: left;
-		}
-		@include media($desktop) {
-			width: 44%;
-			text-align: left;
-		}
-	}
-	
-	.mobile-image {
-		display: block;
-		position: relative;
-		left: -20px;
-		@include media($tablet) {
-			display: none;
-		}
-		img {
-			margin-bottom: 40px;
-			width: calc(100% + 40px);
-		}
-		position: relative;
-		&:before {
-			content: '';
-			width: 0px;
-			height: 0px;
-			border-top: 25px solid $primaryColor;
-			border-left: 20px solid rgba(#000, 0);
-			border-right: 20px solid rgba(#000, 0);
-			position: absolute;
-			top: 0px;
-			left: calc( 50% - 10px);
-		}
-	}
+	.logo-wrap {
+		background: $primaryHighlight;
+		border: 1px solid rgba($lightColor, .3);
+		padding: 20px 20px;
+		// max-height: 252px;
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
 
-
-	form {
-		input,
-		textarea {
-			border-radius: 4px;
-			color: $darkColor !important;
-			background: rgba(#f0f0f0, 0.8) !important;
-			border: rgba(#fff, 0.3) !important;
-		}
-		.disclaimer {
-			color: $lightColor;
-			margin-bottom: 20px;
-			padding: 0 0px;
-			text-align: left;
-		}
-		.type-textarea {
-			margin-bottom: 0 !important;
-		}
-		.robotic {
-			position: absolute;
-		}
-		.type-submitbutton {
-			width: 130px;
-			position: relative;
-			border-radius: 4px;
-			background: $secondaryColor !important;
-			&:after {
-				content: '';
-				position: absolute;
-				left: 75px;
-				top: 8px;
-				background-image: url('images/icon-email.png');
-				background-size: 29px 28px;
-				width: 29px;
-				height: 28px;
-				z-index: 1;
-			}
-			.submit-btn {
-				z-index: 2;
-				padding-right: 60px;
-				background: transparent !important;
-				text-transform: uppercase;
-
-				&:hover {
-					background: transparent !important;
-					// background: $secondaryColor !important;
-				}
+		svg {
+			max-width: 358px;
+			width: 100%;
+			height: auto;
+			path {
+				fill: $lightColor;
 			}
 		}
 	}
-
-	#sf-message-295 {
-		color: $lightColor;
-		border: 1px solid $lightColor;
-		margin: 0 auto;
-		padding: 40px;
-		margin-top: 45px;
-	}
-
 
 	.footer-address {
 		margin-top: 80px;
@@ -271,112 +154,41 @@
 ====================================*/
 
 .lower-footer {
-	text-align: left;
-	background-color: $lightColor;
-	color: $darkColor;
-	padding-top: 60px !important;
-	padding-bottom: 80px !important;
-	@include media($desktop) {
-		padding-bottom: 100px !important;
-		padding-top: 100px !important;
-	}
-}
-
-.footer-buttons {
 	text-align: center;
-	@include media($desktop) {
-		text-align: left;
-	}
-	a {
-		display: inline-block;
-		color: #6e7659;
-		font-family: $secondaryFont;
-		text-decoration: none;
-		font-size: 20px;
-		line-height: 30px;
-		@include media($tablet) {
-			font-size: 27px;
-			
-		}
-
-		&:nth-of-type(1) {
-			border-right: 1px solid #6e7659;
-			padding-right: 10px;
-			margin-right: 5px;
-			@include media($tablet) {
-				padding-right: 15px;
-				margin-right: 15px;
-			}
-		}
-	}
+	background-color: $primaryAlt;
+	color: $darkColor;
+	padding-top: 40px !important;
+	padding-bottom: 40px !important;
 }
 
-
-.footer-logos {
-	margin: 0 auto;
-	margin-top: 60px;
-	@include media($tablet) {
-		margin-top: 100px;
-	}
-	@include media($desktop) {
-		width: 500px;
-		float: right;
-		margin-top: -200px;
-	}
-	ul {
-		list-style: none;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		@include media($desktop) {
-			justify-content: space-between;
-			
-		}
-	}
-	li {
-		@include media($tablet) {
-			margin-right: 20px;
-			margin-left: 20px;
-		}
-		img {
-			width: 80%;
-			@include media($tablet) {
-				width: 100%;
-				width: auto;
-			}
-		}
-	}
-}
 
 .model-disc {
 	font-size: 12px;
 	line-height: 16px;
-	max-width: 600px;
+	max-width: 800px;
 	margin: 0 auto;
-	margin-top: 40px;
-	margin-bottom: 30px;
+	// margin-top: 40px;
+	// margin-bottom: 30px;
 	text-align: center;
-	@include media($desktop) {
-		padding-right: 100px;
-		margin: 30px 0 30px 0;
-		text-align: left;
-	}
+	color: #46484a;
+	font-style: italic;
 }
 
 .copyright,
 .rm-sig {
+	display: inline-block;
 	font-family: $primaryFont;
 	text-align: center;
-	color: $darkColor;
+	color: #46484a;
 	font-size: 12px;
 	line-height: 16px;
 	@include media($desktop) {
-		font-size: 14px;
+		font-size: 15px;
 		line-height: 22px;
-		text-align: left;
+		// text-align: left;
 	}
 	a {
-		color: $darkColor;
+		color: #46484a;
 		text-decoration: none;
 	}
 	a:hover {
