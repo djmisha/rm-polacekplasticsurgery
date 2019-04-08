@@ -16,19 +16,24 @@ footer {
 }
 
 .upper-footer {
-	// max-width: 1400px;
+	width: 100%;
+	max-width: 1400px;
 	border-top: 1px solid $primaryHighlight;
 	border-bottom: 1px solid $primaryHighlight;
-	// margin: 0 auto;
+	margin: 0 auto;
 	padding-top: 40px;
 	padding-bottom: 40px;
-	padding-left: 40px;
-	padding-right: 40px;
 
 	@include media($desktop) {
-		display: flex;
 		// justify-content: flex-start;
 		// align-items: center;
+	}
+	@include media(1400px) {
+		display: flex;
+		justify-content: center;
+		// padding: 0 calc(40px + (50% - (1400px / 2)));
+		padding-top: 40px;
+		padding-bottom: 40px;
 	}
 
 	.footer-logo {
@@ -36,18 +41,28 @@ footer {
 		padding: 18px;
 		width: auto;
 		background: $primaryHighlight;
-		max-width: 500px;
 		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+		margin-bottom: 40px;
 		
 		@include media($desktop) {
+			max-width: 500px;
+			margin: 0 auto;
+			margin-bottom: 80px;
+		}
+		
+		@include media(1400px) {
 			min-width: 500px;
 			margin-right: 60px;
+			margin-bottom: 0;
 		}
 		span {
 			display: block;
 			font-family: $secondaryFont;
-			font-size: 30px;
+			font-size: 18px;
 			color: $lightColor;
+			@include media($tablet) {
+				font-size: 30px;
+			}
 		}
 
 		.logo-line {
@@ -84,6 +99,9 @@ footer .map-addy {
 	@include media($tablet) {
 		display: flex;
 		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+	@include media(1400px) {
 		justify-content: center;
 	}
 }
@@ -130,7 +148,10 @@ footer .footer-address {
 		left: -58px;
 		@include media($tablet) {
 			left: -60px;
-			top: 15px;
+			top: 12px;
+		}
+		@include media($desktop) {
+			top: 20px;
 		}
 	}
 	.loc-phone {
@@ -138,19 +159,28 @@ footer .footer-address {
 		font-family: $secondaryFont;
 		font-size: 30px;
 		@include media($tablet) {
+			font-size: 40px;
+		}
+		@include media($desktop) {
 			font-size: 50px;
 		}
 	}
 }
 
 footer .map-image {
-	width: 350px;
+	max-width: 350px;
+	width: 100%;
 	height: 300px;
 	background: url('images/icon-map.jpg');
 	position: relative;
 	box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+	margin-top: 40px;
 	@include media($tablet) {
-		margin-left: 100px;
+		width: 350px;
+		margin-left: 90px;
+		margin-top: 0;
+	}
+	@include media($desktop) {
 	}
 	.button {
 		position: absolute;
@@ -158,8 +188,10 @@ footer .map-image {
 		bottom: 20px;
 		left: 0;
 		right: 0;
-		max-width: 270px;
 		margin: 0 auto;
+			max-width: 270px;
+		@include media($tablet) {
+		}
 	}
 }
 

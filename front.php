@@ -8,22 +8,25 @@
 <div class="welcome-parallax will-parallax parallax-welcome">
 	<div class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
-			<!-- <div class="wow fadeInUp"  data-wow-delay=".15s"> -->
 				<div class="home-logo">
-				<a href="<?php bloginfo('url'); ?>"><img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt=""> </a><span></span> <h1> <span>David A. Bottger, MD</span></h1>
+				<a href="<?php bloginfo('url'); ?>">
+					<?php inline_svg('logo') ?>
+				</a>
+				<h1><span>Polacek Center for Plastic Surgery</span></h1>
 			</div>
 				
 				<div class="home-addy">
 					<?php if(have_rows('locations', 'option')): ?>
 						<?php while(have_rows('locations', 'option')): the_row(); ?>
 							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
-								<?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?>
+								<i class="fas fa-map-marker-alt"></i> <?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?>
 							</a>
 						<?php endwhile; ?>
 					<?php endif; ?>
 				</div>
-				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow">Schedule a Consultation</a>
-			<!-- </div> -->
+<!-- 				<div class="welcome-bottom-row">
+					<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow">Schedule a Consultation</a>
+				</div> -->
 		</div>
 	</div>
 </div> 

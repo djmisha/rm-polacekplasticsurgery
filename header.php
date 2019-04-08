@@ -52,8 +52,8 @@
 			<?php endif; ?>
 		</div> 
 		<div class="menu-trigger">
-			<i class="fal fa-bars"></i>
-			<!-- <i class="fal fa-window-close"></i> -->
+			<div class="hamburger"></div>
+			<div class="hamburger"></div>
 		</div>
 	</div>
 
@@ -64,7 +64,8 @@
 		<section>
 			<div class="inside-header-logo">
 				<a href="<?php bloginfo('url'); ?>">
-					<img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo">
+					<!-- <?php inline_svg('logo') ?> -->
+					<!-- <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"> -->
 				</a>
 			</div>
 		</section>

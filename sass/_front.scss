@@ -1,5 +1,5 @@
-header,
-.welcome,
+// header,
+// .welcome,
 // footer,
 .home-doctor,
 .home-featured-procedures,
@@ -81,7 +81,7 @@ header,
 		padding-left: 15vw;
 	}
 	a {
-		color: $darkColor;
+		// color: $darkColor;
 		text-decoration: none;
 	}
 	.home-logo {
@@ -95,22 +95,18 @@ header,
 			margin-bottom: 0;
 			background: transparent;
 		}
+		svg {
+			width: auto;
+			@include media($tablet) {
+				width: 358px;
+				height: auto;
+			}
+			path {fill:$lightColor;}
+		}
 		h1 {
 			margin: 0 auto;
 			span {
 				display: none;
-			}
-		}
-
-		img {
-			width: 280px;
-			// margin: 0 auto;
-			max-width: 300px;
-			min-height: 130px;
-			@include media($desktop) {
-				min-height: none;
-				max-width: none;
-				width: auto;
 			}
 		}
 	}
@@ -120,6 +116,13 @@ header,
 		display: none;
 		@include media($tablet) {
 			display: block;
+		}
+		i {
+			position: relative;
+			top: 3px;
+			color: $secondaryColor;
+			font-size: 24px;
+			margin-right: 10px;
 		}
 	}
 	.button {

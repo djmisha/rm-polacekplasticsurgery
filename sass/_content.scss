@@ -82,26 +82,26 @@
 .site-crumbs {
 	padding-top: 7px;
 	padding-bottom: 1px;
-	background: $secondaryAlt;
+	background: #3e5d6f;
 	text-align: left;
 	font-family: $primaryFont;
 	font-size: 10px;
 	line-height: 14px;
 	@include media($tablet) {
-		padding-top: 25px;
+		padding-top: 15px;
 		padding-bottom: 5px;
 		font-size: 15px;
 		line-height: 15px;
 	}
 	.salacious-crumb {
-		color: $primaryAlt;
+		color: $lightColor;
 		position: relative;
 		// font-style: italic;
 		a {
 			font-family: $primaryFont;
 			// text-decoration: none;
 			text-decoration: underline;
-			color: #d4c48f;
+			color: $lightColor;
 			font-size: 10px;
 			line-height: 14px;
 			@include media($tablet) {
@@ -111,11 +111,11 @@
 		}
 		.crumb-sep {
 			margin: 0 8px;
-			color: #d4c48f;
+			color: $lightColor;
 		}
 		.current-crumb-item {
 			text-decoration: none;
-			color: #d4c48f;
+			color: $lightColor;
 		}
 	}
 }
