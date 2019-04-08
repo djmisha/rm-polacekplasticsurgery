@@ -80,15 +80,15 @@ img.aligncenter,
 	text-transform: none;
 	font-family: $primaryFont;
 	padding: 17px 30px;
-	border-radius: 4px;
+	// border-radius: 4px;
 	transition: all 0.2s ease-in-out;
-	background: $primaryColor;
+	background: $secondaryColor;
 	// box-shadow: 0px 10px 20px rgba($primaryColor, 0.4);
 
 	&:hover {
 		text-decoration: none;
-		color: $darkColor !important;
-		background: $secondaryColor;
+		// color: $darkColor !important;
+		background: $primaryColor;
 	}
 }
 

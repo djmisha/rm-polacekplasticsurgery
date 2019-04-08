@@ -1,7 +1,8 @@
 
 <footer>
 	
-	<section class="upper-footer">
+	<div class="upper-footer">
+
 		<div class="footer-logo">
 			<div class="logo-wrap">
 				<?php inline_svg('logo') ?>
@@ -10,33 +11,50 @@
 			</div>
 		</div>
 
-		<!-- <div class="footer-address" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/icon-map.png');">
-			<img src="<?php bloginfo('template_directory'); ?>/images/logo-footer.png" alt="logo">
+
+		<div class="map-addy">
+			
+		 <div class="footer-address" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/icon-map.png');">
 			<?php if(have_rows('locations', 'option')): ?>
 				<?php while(have_rows('locations', 'option')): the_row(); ?>
 					<div class="the-loc">
-						<div class="loc-addy">
-							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
-								<i class="fas fa-map-marker-alt"></i>
-								<?php the_sub_field('address', 'option'); ?><br> <?php the_sub_field('city', 'option'); ?>
-							</a>
-						</div>
 						<div class="loc-phone">
 							<a href="<?php the_sub_field('phone_link', 'option'); ?>" class="track-outbound" data-label="Phone - Footer">
 								<i class="fas fa-mobile-alt"></i>
 								<?php the_sub_field('phone', 'option'); ?></a>
 						</div>
+						<div class="loc-addy">
+							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
+								<i class="fas fa-map-marker-alt"></i>
+								<?php the_sub_field('name', 'option'); ?><br>
+								<?php the_sub_field('address', 'option'); ?><br> <?php the_sub_field('city', 'option'); ?>
+							</a>
+						</div>
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
 
-		<div class="map-image">
-			<img src="<?php bloginfo('template_directory'); ?>/images/bg-footer.jpg" alt="map">
-		</div>
+			<div class="footer-social">
+				<a href="<?php the_field('facebook','options'); ?>" target="_blank" rel="noopener" title="facebook"><i class="fab fa-facebook"></i></a>
+				<a href="<?php the_field('twitter','options'); ?>" target="_blank" rel="noopener" title="twitter"><i class="fab fa-twitter"></i></a>
+				<a href="<?php the_field('instagram','options'); ?>" target="_blank" rel="noopener" title="instagram"><i class="fab fa-instagram"></i></a>
+			</div>
+			</div> 
 
-		</div> -->
-		
-	</section> 
+
+			<div class="map-image">
+				<img src="<?php bloginfo('template_directory'); ?>/images/icon-map.jpg" alt="map">
+				<?php if(have_rows('locations', 'option')): ?>
+					<?php while(have_rows('locations', 'option')): the_row(); ?>
+							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="button track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
+								Map & Directions
+							</a>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
+		</div> 
+
+	</div> 
 	
 	<section class="lower-footer">
 		<div class="model-disc">
