@@ -3801,8 +3801,8 @@ img.alignleft {
   text-decoration: none !important;
   border: none;
   color: #ffffff !important;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 17px;
+  line-height: 25px;
   font-weight: 100;
   text-transform: none;
   font-family: "Lato", sans-serif;
@@ -4419,7 +4419,7 @@ main,
 
 @media only screen and (min-width: 1080px) {
   .nav-bar {
-    height: 60px;
+    height: 70px;
     top: 0px;
   }
 }
@@ -4579,7 +4579,7 @@ main,
 }
 
 .touch-menu .main-menu {
-  background: #7796b6;
+  background: #466679;
   height: 100%;
   width: 100%;
   overflow-y: scroll;
@@ -4734,7 +4734,7 @@ main,
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 60px;
+  height: 70px;
 }
 
 .hover-menu .main-menu > li {
@@ -4745,6 +4745,7 @@ main,
 }
 
 .hover-menu .main-menu > li:hover > a {
+  color: #ffffff;
   background: #424a4f;
 }
 
@@ -4752,7 +4753,7 @@ main,
   opacity: 1;
   visibility: visible;
   z-index: 50;
-  top: 60px;
+  top: 70px;
 }
 
 .hover-menu .main-menu > li.mega-menu {
@@ -4766,14 +4767,8 @@ main,
   -webkit-transition: .25s ease-in-out background;
   transition: .25s ease-in-out background;
   color: #424a4f;
-  height: 60px;
+  height: 70px;
   text-transform: uppercase;
-}
-
-@media only screen and (min-width: 1220px) {
-  .hover-menu .main-menu > li a {
-    padding: 20px 16px;
-  }
 }
 
 .hover-menu .main-menu > li a:hover {
@@ -4782,20 +4777,14 @@ main,
 }
 
 .hover-menu a {
-  font-size: 13px;
-  line-height: 22px;
-}
-
-@media only screen and (min-width: 1220px) {
-  .hover-menu a {
-    font-size: 14px;
-  }
+  font-size: 14px;
+  line-height: 30px;
 }
 
 .hover-menu .sub-menu {
   background: #dce4ea;
   position: absolute;
-  top: 60px;
+  top: 70px;
   left: 50%;
   right: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -4803,14 +4792,10 @@ main,
           transform: translate(-50%, 0);
   opacity: 0;
   visibility: hidden;
-  width: 300px;
+  width: 250px;
   z-index: -5;
   -webkit-transition: .25s ease-in-out all;
   transition: .25s ease-in-out all;
-}
-
-.hover-menu .sub-menu > li {
-  border-bottom: 1px solid rgba(225, 171, 76, 0.1);
 }
 
 .hover-menu .sub-menu > li:last-of-type {
@@ -4823,11 +4808,11 @@ main,
 
 .hover-menu .sub-menu > li.menu-item-has-children:after {
   content: '';
-  width: 12px;
-  height: 20px;
-  background-size: 12px 20px;
-  -webkit-transition: .2s linear transform;
-  transition: .2s linear transform;
+  width: 6px;
+  height: 12px;
+  background-size: 6px 12px;
+  -webkit-transition: .2s linear all;
+  transition: .2s linear all;
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -4846,14 +4831,12 @@ main,
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
-  left: 300px;
+  left: 250px;
   top: 0;
 }
 
 .hover-menu .sub-menu > li.menu-item-has-children:hover:after {
-  -webkit-transform: translateY(-50%) rotate(90deg);
-      -ms-transform: translateY(-50%) rotate(90deg);
-          transform: translateY(-50%) rotate(90deg);
+  right: 7px;
 }
 
 .hover-menu .sub-menu > li.menu-item-has-children:hover > .sub-menu {
@@ -4864,7 +4847,7 @@ main,
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
-  left: 300px;
+  left: 250px;
   top: 0;
 }
 
@@ -4884,6 +4867,7 @@ main,
   text-align: left;
   height: auto !important;
   color: #ffffff;
+  line-height: 20px;
 }
 
 .hover-menu .mega-menu > .sub-menu {
@@ -6984,6 +6968,7 @@ footer .footer-social a i {
 /* ------------------------
 	Home Page
 ------------------------ */
+footer,
 .home-doctor,
 .home-featured-procedures,
 .home-reviews,
@@ -6996,23 +6981,6 @@ footer .footer-social a i {
 .home h2 {
   margin: 0;
   font-family: "Playfair Display", serif;
-  font-size: 26px;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home h2 {
-    margin-bottom: 40px;
-    font-size: 40px;
-    line-height: 45px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home h2 {
-    font-size: 44px;
-    line-height: 47px;
-  }
 }
 
 /*===============================================
@@ -7027,8 +6995,8 @@ footer .footer-social a i {
 }
 
 .welcome {
-  background: #f8f8e2 url("images/bg-welcome.jpg") top right no-repeat;
-  background-size: 600px auto;
+  background: #466679 url("images/bg-welcome.jpg") top right no-repeat;
+  background-size: 620px auto;
   background-position-y: 175px;
   z-index: 1000;
   height: 540px;
@@ -7036,14 +7004,14 @@ footer .footer-social a i {
 
 @media only screen and (min-width: 500px) {
   .welcome {
-    background-size: 750px auto;
+    background-size: 780px auto;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .welcome {
     padding-top: 0;
-    background: #f8f8e2 url("images/bg-welcome.jpg") top center no-repeat;
+    background: #466679 url("images/bg-welcome.jpg") top center no-repeat;
     background-size: 138% auto;
     height: 550px;
     max-height: none;
@@ -7068,7 +7036,7 @@ footer .footer-social a i {
     margin-top: 0;
     max-width: 490px;
     background: none;
-    padding-top: 170px;
+    padding-top: 120px;
     padding-left: 50px;
   }
 }
@@ -7076,8 +7044,9 @@ footer .footer-social a i {
 @media only screen and (min-width: 1080px) {
   .welcome .welcome-cta {
     max-width: none;
-    padding-top: 35vh;
-    padding-left: 15vw;
+    padding-top: 25vh;
+    padding-left: 10vw;
+    min-height: 600px;
   }
 }
 
@@ -7090,19 +7059,23 @@ footer .footer-social a i {
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 320px;
-  background: #ffffff;
+  background: #466679;
+  text-align: center;
 }
 
 @media only screen and (min-width: 768px) {
   .welcome .welcome-cta .home-logo {
+    background: transparent;
     padding: 0;
     margin-bottom: 0;
     background: transparent;
+    max-width: 365px;
   }
 }
 
 .welcome .welcome-cta .home-logo svg {
-  width: auto;
+  width: 180px;
+  height: 71px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -7117,15 +7090,73 @@ footer .footer-social a i {
 }
 
 .welcome .welcome-cta .home-logo h1 {
-  margin: 0 auto;
-}
-
-.welcome .welcome-cta .home-logo h1 span {
+  margin: 0;
   display: none;
 }
 
+.welcome .welcome-cta .home-logo span {
+  font-family: "Playfair Display", serif;
+  display: block;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .welcome-cta .home-logo span {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .welcome-cta .home-logo span:nth-of-type(1) {
+    margin-top: 20px;
+  }
+}
+
+.welcome .welcome-cta .home-logo span:nth-of-type(2) {
+  color: #7796b6;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .welcome-cta .home-logo span:nth-of-type(2) {
+    letter-spacing: 2.5px;
+  }
+}
+
+.welcome .welcome-cta .home-logo .logo-line-top {
+  width: 190px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .welcome-cta .home-logo .logo-line-top {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.welcome .welcome-cta .home-logo .logo-line-bottom {
+  width: 80px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome .welcome-cta .home-logo .logo-line-bottom {
+    display: block;
+  }
+}
+
 .welcome .welcome-cta .home-addy {
-  margin-top: 50px;
+  margin-top: 10px;
   margin-bottom: 25px;
   display: none;
 }
@@ -7144,41 +7175,112 @@ footer .footer-social a i {
   margin-right: 10px;
 }
 
-.welcome .welcome-cta .button {
+.welcome-bottom-row {
+  text-align: left;
+  background: #375364;
+  padding: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome-bottom-row {
+    margin-top: 115px;
+    padding: 35px 5vw;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background: #375364;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .welcome-bottom-row {
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+  }
+}
+
+@media only screen and (min-width: 1330px) {
+  .welcome-bottom-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.welcome-bottom-row h2 {
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+@media only screen and (min-width: 768px) {
+  .welcome-bottom-row h2 {
+    font-size: 26px;
+    line-height: 35px;
+  }
+}
+
+.welcome-bottom-row h2 strong {
+  display: block;
+  font-style: italic;
+}
+
+.welcome-bottom-row .bottom-buttons {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 1330px) {
+  .welcome-bottom-row .bottom-buttons {
+    margin-top: 0;
+  }
+}
+
+.welcome-bottom-row .button {
   width: 100%;
-  position: relative;
-  border-radius: 0;
 }
 
 @media only screen and (min-width: 768px) {
-  .welcome .welcome-cta .button {
-    border-radius: 4px;
-    max-width: 425px;
-    margin: 0;
+  .welcome-bottom-row .button {
+    width: auto;
   }
 }
 
-.welcome .welcome-cta .button:after {
-  content: '';
-  position: absolute;
-  left: calc(50% + 100px);
-  top: 12px;
-  background-image: url("images/icon-schedule.png");
-  background-size: 30px 29px;
-  width: 30px;
-  height: 29px;
-  z-index: 1;
+.welcome-bottom-row .button img {
+  margin-right: 15px;
+}
+
+.welcome-bottom-row .button:nth-of-type(1) {
+  margin-bottom: 10px;
+  background: #48697c;
+  background: linear-gradient(135deg, #48697c 0%, #3c5d71 44%, #04233b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
 }
 
 @media only screen and (min-width: 768px) {
-  .welcome .welcome-cta .button:after {
-    left: 310px;
+  .welcome-bottom-row .button:nth-of-type(1) {
+    margin-right: 10px;
   }
 }
 
-.welcome .welcome-cta .button:hover {
-  background-color: #424a4f;
-  color: #ffffff !important;
+.welcome-bottom-row .button:nth-of-type(2) {
+  background-color: #e1ab4c;
 }
 
 /*===================================

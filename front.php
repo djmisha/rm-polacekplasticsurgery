@@ -8,25 +8,39 @@
 <div class="welcome-parallax will-parallax parallax-welcome">
 	<div class="welcome" id="skiptomaincontent">
 		<div class="welcome-cta">
-				<div class="home-logo">
+			<div class="home-logo">
 				<a href="<?php bloginfo('url'); ?>">
 					<?php inline_svg('logo') ?>
+					<h1>Polacek Center for Plastic Surgery</h1>
+					<span>Non-Surgical Rejuvenation</span>
+					<div class="logo-line-top"></div>
+					<span>Lori G. Polacek, MD</span>
+					<div class="logo-line-bottom"></div>
 				</a>
-				<h1><span>Polacek Center for Plastic Surgery</span></h1>
 			</div>
-				
-				<div class="home-addy">
-					<?php if(have_rows('locations', 'option')): ?>
-						<?php while(have_rows('locations', 'option')): the_row(); ?>
-							<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
-								<i class="fas fa-map-marker-alt"></i> <?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?>
-							</a>
-						<?php endwhile; ?>
-					<?php endif; ?>
-				</div>
-<!-- 				<div class="welcome-bottom-row">
-					<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow">Schedule a Consultation</a>
-				</div> -->
+			<div class="home-addy">
+				<?php if(have_rows('locations', 'option')): ?>
+					<?php while(have_rows('locations', 'option')): the_row(); ?>
+						<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
+							<i class="fas fa-map-marker-alt"></i> <?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?>
+						</a>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			</div>
+		</div>
+		<div class="welcome-bottom-row">
+			<div class="bottom-tag">
+				<h2>
+					Focusing on Non-Surgical Rejuvenation, 
+					<strong>
+					Lead by Board-Certified Plastic Surgeon Lori Polacek, MD
+					</strong>
+				</h2>
+			</div>
+			<div class="bottom-buttons">
+				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-procedure.png" alt="icon">Procedures</a>
+				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-calendar.png" alt="icon">Request an Appointment</a>
+			</div>
 		</div>
 	</div>
 </div> 

@@ -36,7 +36,7 @@
 		<nav>
 			<?php wp_nav_menu( array(
 				'menu' 		=> 'Main',
-				'container_class' => 'menu-wrap',
+				'container_class' => 'menu-wrap menu-is-closed',
 				'menu_id'	=> 'menu-main',
 				'menu_class' => 'main-menu',
 			)); ?>
