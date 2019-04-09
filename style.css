@@ -4367,6 +4367,14 @@ main,
   }
 }
 
+@media only screen and (min-width: 1480px) {
+  section,
+  main,
+  .contain {
+    padding: 0 calc(40px + (50% - (1480px / 2)));
+  }
+}
+
 @media only screen and (min-width: 1080px) {
   .is--device section,
   .is--device main,
@@ -4763,7 +4771,7 @@ main,
 .hover-menu .main-menu > li a {
   display: block;
   text-decoration: none;
-  padding: 20px 10px;
+  padding: 20px 20px;
   -webkit-transition: .25s ease-in-out background;
   transition: .25s ease-in-out background;
   color: #424a4f;
@@ -6713,6 +6721,8 @@ footer .map-image {
 }
 
 footer .map-image .button {
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
   position: absolute;
   border: 1px solid rgba(255, 255, 255, 0.7);
   bottom: 20px;
@@ -6968,16 +6978,6 @@ footer .footer-social a i {
 /* ------------------------
 	Home Page
 ------------------------ */
-footer,
-.home-doctor,
-.home-featured-procedures,
-.home-reviews,
-.home-breast-aug,
-.home-aug-buttons,
-.patient-testis {
-  display: none !important;
-}
-
 .home h2 {
   margin: 0;
   font-family: "Playfair Display", serif;
@@ -6988,7 +6988,7 @@ footer,
 ===============================================*/
 @media only screen and (min-width: 1080px) {
   .welcome-parallax {
-    background: #424a4f url("images/bg-welcome.jpg") center center;
+    background: #466679 url("images/bg-welcome.jpg") center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
@@ -6997,9 +6997,9 @@ footer,
 .welcome {
   background: #466679 url("images/bg-welcome.jpg") top right no-repeat;
   background-size: 620px auto;
-  background-position-y: 175px;
+  background-position-y: 155px;
   z-index: 1000;
-  height: 540px;
+  height: 760px;
 }
 
 @media only screen and (min-width: 500px) {
@@ -7056,8 +7056,9 @@ footer,
 
 .welcome .welcome-cta .home-logo {
   padding-left: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   margin-bottom: 320px;
   background: #466679;
   text-align: center;
@@ -7478,7 +7479,7 @@ footer,
       flex-wrap: wrap;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1080px) {
   .home-featured-procedures ul {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
@@ -7493,8 +7494,6 @@ footer,
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 20px;
-  padding-right: 20px;
   padding-top: 100px;
   padding-bottom: 40px;
   -webkit-transition: all .35s ease-in-out;
@@ -7504,23 +7503,17 @@ footer,
 
 @media only screen and (min-width: 768px) {
   .home-featured-procedures li {
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 300px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 250px;
     padding-bottom: 80px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .home-featured-procedures li {
-    padding-bottom: 80px;
-    padding-top: 370px;
-  }
-}
-
-@media only screen and (min-width: 1480px) {
-  .home-featured-procedures li {
-    background-size: 110% auto;
+    padding-top: 380px;
+    padding-bottom: 40px;
   }
 }
 
@@ -7529,8 +7522,6 @@ footer,
 }
 
 .home-featured-procedures li .the-seth {
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #ffffff;
   padding: 3px 0px;
 }
 
@@ -7541,30 +7532,61 @@ footer,
 }
 
 .home-featured-procedures li .the-seth-button {
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0);
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
-  display: block;
   padding: 5px 0px;
   font-family: "Playfair Display", serif;
   color: #ffffff;
   font-size: 20px;
   z-index: 9999;
   text-decoration: none;
-  border-radius: 4px;
   background: transparent;
 }
 
 @media only screen and (min-width: 768px) {
   .home-featured-procedures li .the-seth-button {
-    padding: 20px 0px;
+    padding: 15px;
     font-size: 30px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .home-featured-procedures li .the-seth-button {
-    min-width: 200px;
+    font-size: 37px;
+    line-height: 40px;
   }
+}
+
+.home-featured-procedures li .the-seth-button-again {
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+  padding: 15px;
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0);
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.home-featured-procedures li .the-seth-button-again span {
+  display: block;
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
+}
+
+.home-featured-procedures li .seths-line {
+  width: 50px;
+  height: 1px;
+  background-color: #ffffff;
+  margin: 0 auto;
+  margin-top: 10px;
+  -webkit-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out;
 }
 
 .home-featured-procedures li .feat-overlay {
@@ -7578,21 +7600,32 @@ footer,
   position: absolute;
   -webkit-transition: all .35s ease-in-out;
   transition: all .35s ease-in-out;
-  background: rgba(66, 74, 79, 0.6);
+  background: rgba(27, 39, 47, 0.6);
 }
 
-.home-featured-procedures li:hover .the-seth-button {
-  background: #424a4f;
-}
-
-.home-featured-procedures li:hover .feat-overlay {
-  background: transparent;
+@media only screen and (min-width: 1080px) {
+  .home-featured-procedures li:hover span {
+    opacity: 1;
+  }
+  .home-featured-procedures li:hover .the-seth-button,
+  .home-featured-procedures li:hover .the-seth-button-again {
+    background: #e1ab4c;
+    -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+            box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+  }
+  .home-featured-procedures li:hover .the-seth-button-again {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .home-featured-procedures li:hover .feat-overlay {
+    background: transparent;
+  }
 }
 
 /*====================================
 =            home-reviews            =
 ====================================*/
 .home-reviews {
+  background: #85a5b6 url("images/bg-reviews-pattern.jpg") center center;
   text-align: center;
   padding-top: 40px;
   padding-bottom: 60px;
@@ -7600,19 +7633,29 @@ footer,
 
 @media only screen and (min-width: 768px) {
   .home-reviews {
-    padding-top: 75px;
+    padding-top: 100px;
     padding-bottom: 100px;
   }
 }
 
+.home-reviews .the-review-box {
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+  border: 20px solid #ffffff;
+}
+
 .home-reviews .the-review {
-  border: 1px solid #424a4f;
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+  background: #7796b6 url("images/bg-reviews.jpg") center center;
+  background-size: cover;
+  border: 1px solid rgba(255, 255, 255, 0.7);
   padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .home-reviews .the-review {
-    padding: 40px 80px;
+    padding: 40px 120px;
   }
 }
 
@@ -7629,389 +7672,85 @@ footer,
 }
 
 .home-reviews .fa-star {
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  color: #ffffff;
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
 }
 
 .home-reviews:hover .fa-star {
   color: orange;
-  margin-right: 3px;
-  margin-left: 3px;
+  margin-right: 6px;
+  margin-left: 6px;
 }
 
 .home-reviews p {
   font-family: "Playfair Display", serif;
   font-size: 18px;
   line-height: 30px;
+  color: #ffffff;
+  font-style: italic;
+  font-weight: 400;
 }
 
 @media only screen and (min-width: 768px) {
   .home-reviews p {
-    font-size: 22px;
-    line-height: 44px;
+    font-size: 30px;
+    line-height: 45px;
   }
+}
+
+.home-reviews p strong {
+  margin-top: 10px;
+  display: block;
+  font-style: normal;
 }
 
 .home-reviews .button {
+  border: 1px solid rgba(255, 255, 255, 0.7);
   margin-top: 20px;
-  padding: 10px 50px;
-}
-
-.home-reviews .button:hover {
-  background: #424a4f;
-  color: #ffffff !important;
-}
-
-.home-reviews .button:before {
-  content: '';
-  width: 0px;
-  height: 0px;
-  border-bottom: 25px solid #424a4f;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  position: absolute;
-  top: -25px;
-  left: calc( 50% - 20px);
-}
-
-.home-breast-aug {
-  background-size: cover;
-  background: url("images/bg-home-breast-aug-mobile.jpg");
-  background-position: left top;
-  background-size: 120vw auto;
-  padding-top: 60vw;
-  background-repeat: no-repeat;
-  position: relative;
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-breast-aug {
-    background: #d8e1bf url("images/bg-home-breast-aug.jpg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    padding-top: 0;
-    height: 745px;
-  }
-}
-
-.home-breast-aug .home-breast-content {
-  text-align: left;
-  z-index: 9999;
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-breast-aug .home-breast-content {
-    width: 600px;
-    position: absolute;
-    right: calc(50% - 550px);
-    top: 100px;
-  }
-}
-
-@media only screen and (min-width: 1480px) {
-  .home-breast-aug .home-breast-content {
-    top: 200px;
-    right: calc(50% - 600px);
-  }
-}
-
-.home-breast-aug .home-breast-content img {
-  width: 100%;
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
 }
 
 @media only screen and (min-width: 768px) {
-  .home-breast-aug .home-breast-content img {
-    width: auto;
-  }
-}
-
-.home-breast-aug h2 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-breast-aug h2 {
-    margin-bottom: 40px;
-  }
-}
-
-.home-aug-buttons {
-  background: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-bottom: 40px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-aug-buttons {
-    margin-bottom: 0px;
-    -ms-flex-wrap: no-wrap;
-        flex-wrap: no-wrap;
-    height: 200px;
-  }
-}
-
-.home-aug-buttons a {
-  margin-bottom: 20px;
-  display: block;
-  width: 100%;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-aug-buttons a {
-    width: auto;
-    display: inline-block;
-    margin-bottom: 0;
+  .home-reviews .button:first-of-type {
     margin-right: 20px;
   }
 }
 
-.home-aug-buttons a:last-of-type {
-  margin-right: 0;
-}
-
-.home-more-procedures {
-  background: #d8e1bf url("images/bg-procedure-slider.jpg") center center no-repeat;
-  background-position-x: -800px;
-  padding-top: 20px;
-  padding-bottom: 60px;
-  min-height: 800px;
-  position: relative;
-  /* icon color */
-  /* position outside */
-}
-
-@media only screen and (min-width: 768px) {
-  .home-more-procedures {
-    padding-top: 40px;
-    background: #d8e1bf url("images/bg-procedure-slider.jpg") center center no-repeat;
-    background-size: cover;
-    min-height: 1200px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-more-procedures {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
-
-.home-more-procedures .bg-p-overlay {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: rgba(66, 74, 79, 0.6);
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(132, 211, 233, 0.8);
-  z-index: 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-more-procedures .bg-p-overlay {
-    display: none;
-  }
-}
-
-.home-more-procedures h2 {
-  z-index: 1;
-  position: relative;
-  margin-top: 0;
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-more-procedures h2 {
-    margin-bottom: 60px;
-  }
-}
-
-.home-more-procedures h3 {
-  font-family: "Playfair Display", serif;
-  margin-top: 0;
-}
-
-.home-more-procedures .the-holder {
-  border: 1px solid #424a4f;
-  position: relative;
-}
-
-.home-more-procedures .the-slider {
-  position: relative;
-  max-width: 550px;
-  height: 100%;
-  padding: 20px 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-more-procedures .the-slider {
-    padding: 60px 50px 60px 80px;
-    background: transparent;
-  }
-}
-
-.home-more-procedures .the-slider div {
-  text-align: left;
-  display: block;
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-more-procedures .the-slider div {
-    clear: both;
-    margin-bottom: 60px;
-  }
-}
-
-.home-more-procedures .the-slider img {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-more-procedures .the-slider img {
-    float: left;
-    margin-right: 40px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-more-procedures .the-slider img {
-    margin-bottom: 200px;
-  }
-}
-
-.home-more-procedures .the-slider:nth-of-type(even) {
-  margin-bottom: 0 !important;
-}
-
-.home-more-procedures .carousel-cell {
-  width: 100%;
-  /* full width */
-  height: 900px;
-  /* height of carousel */
-}
-
-@media only screen and (min-width: 1080px) {
-  .home-more-procedures .carousel-cell {
-    height: 860px;
-    /* height of carousel */
-  }
-}
-
-.home-more-procedures .flickity-button {
-  background: #424a4f;
-  margin-top: 40px;
-}
-
-.home-more-procedures .flickity-prev-next-button {
-  width: 40px;
-  height: 40px;
-  border-radius: 4px;
-}
-
-.home-more-procedures .flickity-button-icon {
-  fill: white;
-}
-
-.home-more-procedures .flickity-prev-next-button.previous {
-  position: relative;
-  left: -5px;
-}
-
-.home-more-procedures .flickity-prev-next-button.next {
-  position: relative;
-  right: -5px;
-}
-
-.home-more-procedures .flickity-page-dots {
-  position: relative;
-  bottom: -10px;
-}
-
-.home-more-procedures .button {
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-.patient-testis {
+.home-why-choose {
+  background: #48697c;
+  background: linear-gradient(135deg, #48697c 0%, #3c5d71 24%, #04233b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
+  color: #ffffff;
   padding-top: 40px;
   padding-bottom: 40px;
 }
 
 @media only screen and (min-width: 768px) {
-  .patient-testis {
-    padding-top: 100px;
-    padding-bottom: 100px;
+  .home-why-choose {
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
-.patient-testis h2 {
-  margin-bottom: 40px;
+.home-why-choose a {
+  color: #ffffff;
+  text-decoration: underline;
 }
 
-@media only screen and (min-width: 768px) {
-  .patient-testis h2 {
-    margin-bottom: 80px;
-  }
+.home-why-choose h2 {
+  font-family: "Lato", sans-serif;
+  font-size: 17px;
+  text-transform: uppercase;
 }
 
-.patient-testis ul {
-  list-style: none;
-}
-
-@media only screen and (min-width: 768px) {
-  .patient-testis ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
-
-.patient-testis li {
-  width: 100%;
-  margin-bottom: 60px;
+.home-why-choose h3 {
   font-family: "Playfair Display", serif;
-  text-align: left;
-  font-size: 22px;
-  line-height: 44px;
-}
-
-@media only screen and (min-width: 768px) {
-  .patient-testis li {
-    margin-bottom: 0px;
-    width: 45%;
-  }
-}
-
-.patient-testis img {
-  max-width: 120px;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .patient-testis img {
-    margin-right: 40px;
-    float: left;
-  }
-}
-
-.patient-testis .button {
-  margin-top: 20px;
+  font-style: italic;
+  -ms-flex-wrap: 300;
+      flex-wrap: 300;
+  max-width: 1180px;
 }
 
 /* ------------------------

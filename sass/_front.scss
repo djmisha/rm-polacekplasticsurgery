@@ -1,5 +1,5 @@
-// header,
-// .welcome,
+header,
+.welcome,
 footer,
 .home-doctor,
 .home-featured-procedures,
@@ -8,7 +8,7 @@ footer,
 .home-aug-buttons,
 .patient-testis 
 {
- 	display: none !important;
+ 	// display: none !important;
  }
 
 
@@ -36,7 +36,7 @@ footer,
 
 .welcome-parallax {
 	@include media($desktop) {
-		background: $primaryColor url("images/bg-welcome.jpg") center center;
+		background: #466679 url("images/bg-welcome.jpg") center center;
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
@@ -45,9 +45,9 @@ footer,
 .welcome {
 	background: #466679 url("images/bg-welcome.jpg") top right no-repeat;
 	background-size: 620px auto;
-	background-position-y: 175px; 
+	background-position-y: 155px; 
 	z-index: 1000;
-	height: 540px;
+	height: 760px;
 	@include media(500px) {
 		background-size: 780px auto;
 	}
@@ -58,7 +58,6 @@ footer,
 		height: 550px;
 		max-height: none;
 	}
-
 	@include media($desktop) {
 		background: none;
 		height: 100vh;
@@ -88,8 +87,9 @@ footer,
 	}
 	.home-logo {
 		padding-left: 20px;
-		padding-top: 20px;
-		padding-bottom: 20px;
+		padding-right: 20px;
+		padding-top: 10px;
+		padding-bottom: 10px;
 		margin-bottom: 320px;
 		background: #466679;
 		@include media($tablet) {
@@ -394,7 +394,7 @@ footer,
 		list-style: none;
 		display: flex;
 		flex-wrap: wrap;
-		@include media($tablet) {
+		@include media($desktop) {
 			flex-wrap: nowrap;
 			justify-content: center;
 		}
@@ -404,52 +404,72 @@ footer,
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		padding-left: 20px;
-		padding-right: 20px;
 		padding-top: 100px;
 		padding-bottom: 40px;
 		transition: all .35s ease-in-out;
 		position: relative;
 		@include media($tablet) {
-			padding-left: 40px;
-			padding-right: 40px;
-			padding-top: 300px;
+			padding-left: 20px;
+			padding-right: 20px;
+			padding-top: 250px;
 			padding-bottom: 80px;
 		}
 		@include media($desktop) {
-			padding-bottom: 80px;
-			padding-top: 370px;
+			padding-top: 380px;
+			padding-bottom: 40px;
 		}
 		@include media($full) {
-			background-size: 110% auto;
+			// background-size: 110% auto;
 		}
 		a {text-decoration: none;}
 		.the-seth {
-			border-top: 1px solid $lightColor;
-			border-bottom: 1px solid $lightColor;
 			padding: 3px 0px;
 			@include media($tablet) {
 				padding: 7px 0px;
 			}
 		}
 		.the-seth-button {
+			box-shadow: 10px 10px 15px rgba($primaryColor, .0);
 			transition: all .35s ease-in-out;
-			display: block;
 			padding: 5px 0px;
 			font-family: $secondaryFont;
 			color: $lightColor;
 			font-size: 20px;
 			z-index: 9999;
 			text-decoration: none;
-			border-radius: 4px;
 			background: transparent;
+
 			@include media($tablet) {
-				padding: 20px 0px;
+				padding: 15px;
 				font-size: 30px;
 			}
 			@include media($desktop) {
-				min-width: 200px;
+				font-size: 37px;
+				line-height: 40px;
 			}
+		}
+		.the-seth-button-again {
+			transition: all .35s ease-in-out;
+			padding: 15px;
+			box-shadow: 10px 10px 15px rgba($primaryColor, .0);
+			background: transparent;
+			border: 1px solid transparent;
+			span {
+				display: block;
+				font-family: $primaryFont;
+				font-size: 17px;
+				margin-top: 10px;
+				opacity: 0;
+				transition: all .35s ease-in-out;
+			}
+		}
+		.seths-line {
+			width: 50px;
+			height: 1px;
+			background-color: $lightColor;
+			margin: 0 auto;
+			margin-top: 10px;
+			transition: all .35s ease-in-out;
 		}
 		.feat-overlay {
 			z-index: -1;
@@ -461,15 +481,28 @@ footer,
 			height: 100%;
 			position: absolute;
 			transition: all .35s ease-in-out;
-			background: rgba( $primaryColor, .6);
+			background: rgba( #1b272f, .6);
 		}
+		@include media($desktop) {
+			
 		&:hover {
-			.the-seth-button {
-				background: $primaryColor;
+			span {
+				opacity: 1;
 			}
+			.the-seth-button,
+			.the-seth-button-again {
+				background: $secondaryColor;
+			box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+
+			}
+			.the-seth-button-again {
+				border: 1px solid rgba($lightColor, .2);
+			}
+
 			.feat-overlay {
 				background: transparent;
 			}
+		}
 		}
 	}
 }
@@ -482,18 +515,26 @@ footer,
 ====================================*/
 
 .home-reviews {
+	background: #85a5b6 url('images/bg-reviews-pattern.jpg') center center;
 	text-align: center;
 	padding-top: 40px;	
 	padding-bottom: 60px;
 	@include media($tablet) {
-		padding-top: 75px;	
+		padding-top: 100px;	
 		padding-bottom: 100px;
 	}	
+	.the-review-box {
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+		border: 20px solid $lightColor;
+	}
 	.the-review {
-		border: 1px solid $primaryColor;
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+		background: #7796b6 url('images/bg-reviews.jpg') center center;
+		background-size: cover;
+		border: 1px solid rgba($lightColor, .7);
 		padding: 20px;
 		@include media($tablet) {
-			padding: 40px 80px;
+			padding: 40px 120px;
 		}
 		.the-stars  {
 			margin-top: 20px;
@@ -506,302 +547,78 @@ footer,
 		}
 	}
 	.fa-star {
-		transition: all .3s ease-in-out;
+		color: $lightColor;
+		transition: all .25s ease-in-out;
 	}
 	&:hover {
 		.fa-star {
 			color: orange;
-			margin-right: 3px;
-			margin-left: 3px;
+			margin-right: 6px;
+			margin-left: 6px;
 		}
 	}
 	p {
 		font-family: $secondaryFont;
 		font-size: 18px;
 		line-height: 30px;
+		color: $lightColor;
+		font-style: italic;
+		font-weight: 400;
+
 		@include media($tablet) {
-			font-size: 22px;
-			line-height: 44px;
+			font-size: 30px;
+			line-height: 45px;
 		}
-	}
-	.button {
-		margin-top: 20px;
-		padding: 10px 50px;
-		&:hover {
-			background: $primaryColor;
-			color: $lightColor !important;
-		}
-		&:before {
-			content: '';
-			width: 0px;
-			height: 0px;
-			border-bottom: 25px solid $primaryColor;
-			border-left: 20px solid rgba(#000, 0);
-			border-right: 20px solid rgba(#000, 0);
-			position: absolute;
-			top: -25px;
-			left: calc( 50% - 20px);
-		}
-	}
-}
-
-
-
-.home-breast-aug {
-	background-size: cover;
-	background:  url('images/bg-home-breast-aug-mobile.jpg');
-	background-position: left top;
-	background-size: 120vw auto;
-	padding-top: 60vw;
-	background-repeat: no-repeat;
-	@include media($desktop) {
-		background: $tertiaryColor url('images/bg-home-breast-aug.jpg');
-		background-repeat: no-repeat;
-		background-position: center center;
-		background-size: cover;
-		padding-top: 0;
-		height: 745px;
-	}
-	position: relative;
-	.home-breast-content {
-		text-align: left;
-		@include media($desktop) {
-			width: 600px;
-			position: absolute;
-			right: calc(50% - 550px;);
-			top: 100px;
-		}
-		@include media($full) {
-			top: 200px;
-			right: calc(50% - 600px;);
-		}
-		z-index: 9999;
-		img {
-			width: 100%;
-			@include media($tablet) {
-				width: auto;
-			}
-		}
-	}
-	h2 {
-		margin-bottom: 20px;
-		@include media($desktop) {
-			margin-bottom: 40px;
-		}
-	}
-}
-
-
-.home-aug-buttons {
-	background: $lightColor;
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	margin-bottom: 40px;
-	flex-wrap: wrap;
-	text-align: center;
-	@include media($tablet) {
-		margin-bottom: 0px;
-		flex-wrap: no-wrap;
-		height: 200px;
-	}
-	a {
-		margin-bottom: 20px;
-		display: block; 
-		width: 100%;
-		@include media($tablet) {
-			width: auto;
-			display: inline-block;
-			margin-bottom: 0;
-			margin-right: 20px;
-		}
-		&:last-of-type {
-			margin-right: 0;
-		}
-	}
-}
-
-
-
-
-.home-more-procedures {
-	background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
-	background-position-x: -800px; 
-	// background-size: cover;
-	padding-top: 20px;
-	padding-bottom: 60px;
-	min-height: 800px;
-	@include media($tablet) {
-		padding-top: 40px;
-		background: $tertiaryColor url('images/bg-procedure-slider.jpg') center center no-repeat;
-		background-size: cover;
-		min-height: 1200px;
-	}
-	@include media($desktop) {
-		padding-top: 100px;
-		padding-bottom: 100px;
-	}
-	position: relative;
-	.bg-p-overlay {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		background: rgba( $primaryColor, .6);
-		top: 0;
-		bottom: 0;
-		left:0;
-		right: 0;
-		background: rgba( #84d3e9, .8);
-		z-index: 0;
-		@include media($tablet) {
-			display: none;
-		}
-	}
-	h2 {
-		z-index: 1;
-		position: relative;
-		margin-top: 0;
-		@include media($desktop) {
-			margin-bottom: 60px;
-		}
-	}
-	h3 {
-		font-family: $secondaryFont;
-		margin-top: 0;
-	}
-	.the-holder {
-		border: 1px solid $primaryColor;
-		position: relative;
-	}
-	.the-slider {
-		position: relative;
-		max-width: 550px;
-		height: 100%;
-		padding: 20px 20px;
-		@include media($tablet) {
-			padding: 60px 50px 60px 80px;
-			background: transparent;
-		}
-		@include media($desktop) {
-		}
-		div {
-			text-align: left;
+		strong {
+			margin-top: 10px;
 			display: block;
-			@include media($desktop) {
-				clear: both;
-				margin-bottom: 60px;
-			}
-		}
-		img {
-			margin-bottom: 20px;
-			@include media($tablet) {
-				float: left;
-				margin-right: 40px;
-			}
-			@include media($desktop) {
-				margin-bottom: 200px;
-			}
-		}
-		&:nth-of-type(even) {
-			margin-bottom: 0 !important;
+			font-style: normal;
 		}
 	}
-	
-
-	.carousel-cell {
-	  width: 100%; /* full width */
-	  height: 900px; /* height of carousel */
-	  @include media($desktop) {
-		  height: 860px; /* height of carousel */
-		  // border: 1px solid red;
-		}
-	}
-
-
-	.flickity-button {
-		background: $primaryColor;
-		margin-top: 40px;
-	}
-	.flickity-button:hover {
-	}
-
-	.flickity-prev-next-button {
-		width: 40px;
-		height: 40px;
-		border-radius: 4px;
-	}
-	/* icon color */
-	.flickity-button-icon {
-		fill: white;
-	}
-
-	/* position outside */
-	.flickity-prev-next-button.previous {
-		position: relative;
-		left: -5px;
-	}
-	.flickity-prev-next-button.next {
-		position: relative;
-		right: -5px;
-	}
-	.flickity-page-dots {
-		position: relative;
-		bottom: -10px
-	}
-
 	.button {
+		border: 1px solid rgba($lightColor, .7);
 		margin-top: 20px;
-		margin-bottom: 40px;
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+		&:first-of-type {
+			@include media($tablet) {
+				margin-right: 20px;
+				
+			}
+		}
 	}
 }
 
 
-
-
-
-.patient-testis {
+.home-why-choose {
+	background: rgb(72,105,124);
+	background: -moz-linear-gradient(-45deg, rgba(72,105,124,1) 0%, rgba(60,93,113,1) 24%, rgba(4,35,59,1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 24%,rgba(4,35,59,1) 100%);
+	background: linear-gradient(135deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 24%,rgba(4,35,59,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
+	color: $lightColor;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	@include media($tablet) {
-		padding-top: 100px;
-		padding-bottom: 100px;
+		padding-top: 40px;
+		padding-bottom: 40px;		
+	}
+	.why-choose-border {
+
+	}
+	a {
+		color: $lightColor;
+		text-decoration: underline;
 	}
 	h2 {
-		margin-bottom: 40px;
-		@include media($tablet) {
-			margin-bottom: 80px;
-		}
+		font-family: $primaryFont;
+		font-size: 17px;
+		text-transform: uppercase;
 	}
-
-	ul {
-		list-style: none;
-		@include media($tablet) {
-			display: flex;
-			justify-content: space-between;
-		}
-	}
-	li {
-		width: 100%;
-		margin-bottom: 60px;
-		@include media($tablet) {
-			margin-bottom: 0px;
-			width: 45%;
-		}
+	h3 {
 		font-family: $secondaryFont;
-		text-align: left;
-		font-size: 22px;
-		line-height: 44px;
-	}
-	img {
-		max-width: 120px;
-		margin-bottom: 20px;
-		@include media($tablet) {
-			margin-right: 40px;
-			float: left;
-		}
-	}
-	.button {
-		margin-top: 20px;
+		font-style: italic;
+		flex-wrap: 300;
+		max-width: 1180px;
 	}
 }
 

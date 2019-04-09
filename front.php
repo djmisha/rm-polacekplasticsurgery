@@ -31,12 +31,10 @@
 		<div class="welcome-bottom-row">
 			<div class="bottom-tag">
 				<h2>
-					Focusing on Non-Surgical Rejuvenation, 
-					<strong>
-					Lead by Board-Certified Plastic Surgeon Lori Polacek, MD
-					</strong>
-				</h2>
-			</div>
+					<?php the_field('welcome_headline'); ?>
+					<!-- Focusing on Non-Surgical Rejuvenation, <strong> Lead by Board-Certified Plastic Surgeon Lori Polacek, MD </strong>  -->
+				</h2> 
+					</div>
 			<div class="bottom-buttons">
 				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-procedure.png" alt="icon">Procedures</a>
 				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-calendar.png" alt="icon">Request an Appointment</a>
@@ -64,6 +62,14 @@
 	</div>
 </section>
 
+-->
+
+<section class="home-why-choose">
+	<h2>Why choose The The Polacek Center?</h2>
+	<h3>Your appearance is worth investing in a <strong>plastic surgeon’s skill and precision.</strong> 
+To ensure your safety and beautiful, natural results.</h3>
+
+</section>
 
 <div class="home-featured-procedures">
 	<?php if(have_rows('featured_procedures_1')): ?>
@@ -75,9 +81,12 @@
 						<div class="feat-overlay"></div>
 						<div class="the-seth">
 							<div class="the-seth-button">
-								<?php the_sub_field('headline'); ?>
+								<div class="the-seth-button-again">
+									<?php the_sub_field('headline'); ?>
+									<span>Learn More</span>
+									<div class="seths-line"></div>
+								</div>	
 							</div>	
-
 						</div>
 					</a>
 				</li>
@@ -87,77 +96,23 @@
 	<?php endif; ?>
 </div>
 
-
 <section class="home-reviews">
-	<div class="the-review">
-		<h2><?php the_field('home_reviews_headline'); ?></h2>
-		<div class="the-stars">
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-			<i class="fas fa-star"></i>
-		</div>
-		<?php the_field('home_reviews_content'); ?>
-		<span class="button"><i class="fas fa-user-alt"></i> <?php the_field('home_reviews_name'); ?> </span>
-	</div>
-</section>
-
-
-<section class="home-breast-aug will-parallax parallax-home-breast">
-	<div class="home-breast-content wow fadeInUp"  data-wow-delay=".15s">
-		<h2><?php the_field('breast_augmentation_headline'); ?></h2>
-		<?php the_field('breast_augmentation_content'); ?>
-	</div>
-</section>
-
-
-<section class="home-aug-buttons wow fadeIn"  data-wow-delay=".25s">
-	<a href="<?php the_field('learn_more_about_breast_augmentation_button'); ?>" class="button" rel="nofollow">Learn More about Breast Augmentation</a>
-	<a href="<?php the_field('view_photo_gallery_button'); ?>" class="button" rel="nofollow">View Photo Gallery</a>
-</section> 
-
-
-<section class="home-more-procedures">
-	<div class="bg-p-overlay"></div>
-	<h2><?php the_field('featured_procedures_headline'); ?></h2>
-	<div class="the-holder">
-		<div class="the-slider">
-			<?php if(have_rows('two-procedures')): ?>
-				<?php while(have_rows('two-procedures')): the_row(); ?>
-					<div class="carousel-cell">
-					<?php if(have_rows('featured_procedures_slideshow')): ?>
-						<?php while(have_rows('featured_procedures_slideshow')): the_row(); ?>
-							<div>
-								<img src="<?php the_sub_field('image'); ?>" alt="icon">
-								<h3><?php the_sub_field('title'); ?></h3>
-								<?php the_sub_field('content'); ?>
-								<a href="<?php the_sub_field('link'); ?>" class="button">Learn More</a>
-							</div>
-						<?php endwhile; ?>
-					<?php endif; ?>
-					</div>
-				<?php endwhile; ?>
-			<?php endif; ?>
+	<div class="the-review-box">
+		<div class="the-review">
+			<div class="the-stars">
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+			</div>
+			<?php the_field('home_reviews_content'); ?>
 		</div>
 	</div>
+	<div class="review-buttons">
+		<a href="<?php the_field(''); ?>" class="button">Read More Reviews</a>
+		<a href="<?php the_field(''); ?>" class="button">Leave Your Review</a>
+	</div>
 </section>
-
-
-
-<section class="patient-testis">
-	<h2><?php the_field('patient_testimonials_headline'); ?></h2>
-	<?php if(have_rows('patient_testis')): ?>
-		<ul>
-			<?php while(have_rows('patient_testis')): the_row(); ?>
-				<li>
-					<img src="<?php the_sub_field('image'); ?>" alt="icon">
-					<?php the_sub_field('content'); ?>
-				</li>
-			<?php endwhile; ?>
-		</ul>
-	<?php endif; ?>
-	<a href="<?php the_field('patient_testis_link'); ?>" rel="nofollow" class="button">More Testimonials</a>
-</section> -->
 
 <?get_footer()?>

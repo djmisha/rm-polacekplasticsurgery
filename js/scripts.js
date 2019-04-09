@@ -36,14 +36,14 @@
 
 		/* Homepage Procedures Slideshow */
 
-		$('.the-slider').flickity({
-		  cellAlign: 'left',
-		  contain: true,
-		  autoPlay: 6500,
-		  wrapAround: true
-		  // fade: true, 
-		  // groupCells: 2
-		});
+		// $('.the-slider').flickity({
+		//   cellAlign: 'left',
+		//   contain: true,
+		//   autoPlay: 6500,
+		//   wrapAround: true
+		//   // fade: true, 
+		//   // groupCells: 2
+		// });
 
 
 		/*================================================================
@@ -84,17 +84,17 @@
 		  // });
 
 			
-		var $grid = $('.testi-container').imagesLoaded( function() {
-		var $grid = $(".testi-container").isotope({
-			itemSelector: ".the-testi",
-			percentPosition: true,
-			  masonry: {
-			    // use element for option
-			    columnWidth: '.the-testi',
-			    columnWidth: 45,
-			  }
-		});
-		});
+		// var $grid = $('.testi-container').imagesLoaded( function() {
+		// var $grid = $(".testi-container").isotope({
+		// 	itemSelector: ".the-testi",
+		// 	percentPosition: true,
+		// 	  masonry: {
+		// 	    // use element for option
+		// 	    columnWidth: '.the-testi',
+		// 	    columnWidth: 45,
+		// 	  }
+		// });
+		// });
 
 		/* Adds Fancybox */
 			

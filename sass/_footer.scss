@@ -183,6 +183,7 @@ footer .map-image {
 	@include media($desktop) {
 	}
 	.button {
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
 		position: absolute;
 		border: 1px solid rgba($lightColor, .7);
 		bottom: 20px;

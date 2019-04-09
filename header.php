@@ -9,20 +9,13 @@
 	<title><?php wp_title(""); ?></title>
 
 	<?php if(!is_404()): ?>
-		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400,700i' ); ?>
+		<?php miniCSS::url( 'https://fonts.googleapis.com/css?family=Lato|Playfair+Display:400,400i,700i' ); ?>
 	<?php endif; ?>
 
 	<?php wp_head()?>
 
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-7670521-1"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'UA-7670521-1');
-	</script>
+	
 
 </head>
 
