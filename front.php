@@ -65,11 +65,26 @@
 -->
 
 <section class="home-why-choose">
-	<h2>Why choose The The Polacek Center?</h2>
-	<h3>Your appearance is worth investing in a <strong>plastic surgeon’s skill and precision.</strong> 
-To ensure your safety and beautiful, natural results.</h3>
-
+	<div class="choosy-border"></div>
+	<h2><?php the_field('why_choose_headline'); ?></h2>
+	<div class="choosy-border-smaller"></div>
+	<h3><?php the_field('why_choose_subheadline'); ?></h3>
+	<div class="why-choose-content">
+		<?php the_field('why_choose_content'); ?>
+		<?php if(have_rows('why_choose_logos')): ?>
+			<ul>
+				<?php while(have_rows('why_choose_logos')): the_row(); ?>
+					<li>
+						<img src="<?php the_sub_field('logo'); ?>" alt="logo">
+					</li>
+				<?php endwhile; ?>
+			</ul>
+		<?php endif; ?>
+	</div>
+	<div class="choosy-border"></div>
 </section>
+
+
 
 <div class="home-featured-procedures">
 	<?php if(have_rows('featured_procedures_1')): ?>

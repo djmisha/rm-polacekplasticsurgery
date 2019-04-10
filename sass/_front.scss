@@ -596,14 +596,29 @@ footer,
 	background: linear-gradient(135deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 24%,rgba(4,35,59,1) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
 	color: $lightColor;
-	padding-top: 40px;
-	padding-bottom: 40px;
+	padding-top: 20px;
+	padding-bottom: 20px;
 	@include media($tablet) {
 		padding-top: 40px;
 		padding-bottom: 40px;		
 	}
-	.why-choose-border {
-
+	.choosy-border {
+		height: 1px;
+		width: 100%;
+		background: $primaryHighlight;
+		margin: 20px 0;
+		@include media($tablet) {
+			margin: 20px 0;
+		}
+	}
+	.choosy-border-smaller {
+		height: 1px;
+		width: 150px;
+		background: $primaryHighlight;
+		// margin: 20px 0;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 	a {
 		color: $lightColor;
@@ -613,12 +628,73 @@ footer,
 		font-family: $primaryFont;
 		font-size: 17px;
 		text-transform: uppercase;
+		margin-bottom: 0;
 	}
 	h3 {
 		font-family: $secondaryFont;
 		font-style: italic;
-		flex-wrap: 300;
-		max-width: 1180px;
+		// font-weight: 300;
+		max-width: 1280px;
+		margin: 0 auto;
+		font-size: 20px;
+		line-height: 34px;
+		@include media($tablet) {
+			font-size: 27px;
+			line-height: 45px;
+		}
+		@include media($desktop) {
+			font-size: 37px;
+			line-height: 57px;
+		}
+	}
+	.why-choose-content {
+		margin-top: 40px;
+		margin-bottom: 40px;
+		text-align: left;
+		position: relative;
+		@include media($tablet) {
+			margin-top: 80px;
+			margin-bottom: 60px;
+		}
+		p {
+			@include media($tablet) {
+			}
+			@include media($desktop) {
+				padding-left: 70px;
+				max-width: 650px;
+			}
+			a {
+				color: $lightColor;
+				text-decoration: underline;
+			}
+		}
+		ul {
+			max-width: 370px;
+			margin: 0 auto;
+			margin-top: 40px;
+			margin-bottom: 40px;
+			// border: 1px solid white;
+			list-style: none;
+			display: flex;
+			justify-content: space-between;
+			@include media($desktop) {
+				position: absolute;
+				bottom: -40px;
+				right: calc(50% - 500px);
+			}
+			li {
+				width: 40%;
+				@include media($tablet) {
+					width: auto;
+				}
+			}
+			img {
+				width: 100%;
+				@include media($tablet) {
+					width: auto;
+				}
+			}
+		}
 	}
 }
 
