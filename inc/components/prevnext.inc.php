@@ -31,7 +31,7 @@
 */
 function prevnext__modify( $a , $attr = '' , $before = null , $after = null ){
 	if(empty($a)) return;	
-	$_attr = '';
+	$_attr = [];
 	if(!empty( $attr ) && is_array($attr)):		
 		foreach($attr as $key => $val):
 			$_attr[] = "{$key}=\"{$val}\"";

@@ -125,9 +125,15 @@
 		</div>
 	</div>
 	<div class="review-buttons">
-		<a href="<?php the_field(''); ?>" class="button">Read More Reviews</a>
-		<a href="<?php the_field(''); ?>" class="button">Leave Your Review</a>
+		<a href="<?php the_field('read_more_reviews_button'); ?>" class="button">Read More Reviews</a>
+		<a href="<?php the_field('leave_your_review_button'); ?>" class="button">Leave Your Review</a>
 	</div>
 </section>
+
+<section class="home-media-results">
+	<div class="the-media">
+		<h2>In the Media</h2>
+	</div>
+</section>	
 
 <?get_footer()?>

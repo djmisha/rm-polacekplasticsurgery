@@ -2,13 +2,11 @@ header,
 .welcome,
 footer,
 .home-doctor,
+.home-why-choose,
 .home-featured-procedures,
-.home-reviews,
-.home-breast-aug,
-.home-aug-buttons,
-.patient-testis 
+.home-reviews
 {
- 	// display: none !important;
+ 	display: none !important;
  }
 
 
@@ -698,4 +696,17 @@ footer,
 	}
 }
 
-
+.home-media-results {
+	background: rgb(72,105,124);
+	background: -moz-linear-gradient(-45deg, rgba(72,105,124,1) 0%, rgba(60,93,113,1) 24%, rgba(4,35,59,1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 24%,rgba(4,35,59,1) 100%);
+	background: linear-gradient(135deg, rgba(72,105,124,1) 0%,rgba(60,93,113,1) 24%,rgba(4,35,59,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#48697c', endColorstr='#04233b',GradientType=1 );
+	color: $lightColor;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	@include media($tablet) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
