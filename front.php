@@ -36,8 +36,8 @@
 				</h2> 
 					</div>
 			<div class="bottom-buttons">
-				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-procedure.png" alt="icon">Procedures</a>
-				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-calendar.png" alt="icon">Request an Appointment</a>
+				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-procedure.png" alt="icon">Procedures</a>
+				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-calendar.png" alt="icon">Request an Appointment</a>
 			</div>
 		</div>
 	</div>
@@ -58,7 +58,7 @@
 				<?php endwhile; ?>
 			</ul>
 		<?php endif; ?>
-		<a href="<?php the_field('doctor_bio_button'); ?>" class="button">Read My Biography</a>
+		<a href="<?php the_field('doctor_bio_button'); ?>" class="button" rel="nofollow">Read My Biography</a>
 	</div>
 </section>
 
@@ -125,15 +125,26 @@
 		</div>
 	</div>
 	<div class="review-buttons">
-		<a href="<?php the_field('read_more_reviews_button'); ?>" class="button">Read More Reviews</a>
-		<a href="<?php the_field('leave_your_review_button'); ?>" class="button">Leave Your Review</a>
+		<a href="<?php the_field('read_more_reviews_button'); ?>" class="button" rel="nofollow">Read More Reviews</a>
+		<a href="<?php the_field('leave_your_review_button'); ?>" class="button" rel="nofollow">Leave Your Review</a>
 	</div>
 </section>
 
 <section class="home-media-results">
 	<div class="the-media">
 		<h2>In the Media</h2>
+		<div class="media-border-smaller"></div>
+		<?php the_field('home_media_content'); ?>
 	</div>
+	<div class="the-results">
+		<h2>Patient Results</h2>
+		<div class="media-border-smaller"></div>
+		<div class="results-images">
+			<img src="<?php the_field('before_image'); ?>" alt="results before image">
+			<img src="<?php the_field('after_image'); ?>" alt="results after image">
+		</div>
+		<a href="<?php bloginfo('template_directory'); ?>/gallery/" class="button" rel="nofollow">Photo Gallery</a>
+	</div>	
 </section>	
 
 <?get_footer()?>

@@ -1,11 +1,11 @@
 header,
 .welcome,
 footer,
-.home-doctor,
+// .home-doctor,
 .home-why-choose,
 .home-featured-procedures,
-.home-reviews
-{
+.home-reviews,
+.home-media-results {
  	display: none !important;
  }
 
@@ -490,7 +490,7 @@ footer,
 			.the-seth-button,
 			.the-seth-button-again {
 				background: $secondaryColor;
-			box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+				box-shadow: 10px 10px 15px rgba($primaryColor, .3);
 
 			}
 			.the-seth-button-again {
@@ -613,7 +613,6 @@ footer,
 		height: 1px;
 		width: 150px;
 		background: $primaryHighlight;
-		// margin: 20px 0;
 		margin: 0 auto;
 		margin-top: 20px;
 		margin-bottom: 20px;
@@ -708,5 +707,57 @@ footer,
 	@include media($tablet) {
 		padding-top: 100px;
 		padding-bottom: 100px;
+	}
+	@include media($desktop) {
+		display: flex;
+		justify-content: space-between;
+	}
+	.media-border-smaller {
+		height: 1px;
+		width: 100px;
+		background: $lightColor;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 25px;
+	}
+	p {
+		text-align: left;
+		a {color: $lightColor;text-decoration: underline;}
+	}
+	.the-media {
+		max-width: 570px;
+		margin: 0 auto;
+		@include media($tablet) {
+		}
+		@include media($desktop) {
+			width: auto;
+		}
+	}
+	.the-results {
+		margin-top: 60px;
+		@include media($desktop) {
+			margin-top: 0;
+			margin-left: 80px;
+			width: 48%;
+		}
+		@include media($full) {
+			margin-left: 0;
+		}
+		
+		img {
+			box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+			border: 10px solid $lightColor;
+			&:first-of-type {
+				margin-right: 40px;
+			}
+		}
+		.button {
+			margin-top: 40px;
+			width: 200px;
+		}
+	}
+	.results-images {
+		display: flex;
+		justify-content: center;
 	}
 }
