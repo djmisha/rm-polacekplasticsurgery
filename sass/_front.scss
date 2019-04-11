@@ -6,24 +6,13 @@ footer,
 .home-featured-procedures,
 .home-reviews,
 .home-media-results {
- 	display: none !important;
+ 	// display: none !important;
  }
 
 
  .home h2 {
  	margin: 0;
  	font-family: $secondaryFont;
- 	// font-size: 26px;
- 	// margin-bottom: 20px;
- 	@include media($tablet) {
- 		// margin-bottom: 40px;
- 		// font-size: 40px;
- 		// line-height: 45px;
- 	}
- 	@include media($desktop) {
- 		// font-size: 44px;
- 		// line-height: 47px;
- 	}
  }
 
 
@@ -253,29 +242,22 @@ footer,
 ===================================*/
 
 .home-doctor {
-	background: #d8e1bf;
 	position: relative;
 	text-align: left;
 	padding-top: 40px;
 	padding-bottom: 40px;
 	position: relative;
+	background: #9fb9c7 url("images/bg-doctor.jpg") center center no-repeat;
+	background-size: cover;
+		overflow: hidden;
 
 	@include media($tablet) {
-		padding-top: 60px;
-		padding-bottom: 80px;
+		padding-top: 100px;
+		// padding-top: 120px;
+		padding-bottom: 100px;
 	}
 	@include media($desktop) {
-		background: url("images/bg-doctor.jpg") center center no-repeat;
-		background-position-x: -200px; 
-		background-size: cover;
-		// height: 900px;
-		padding-top: 115px;
-		padding-left: 40%;
-	}
-	@include media($full) {
-		background: url("images/bg-doctor.jpg") center left no-repeat;
-		background-size: cover;
-		padding-bottom: 150px;
+		background-attachment: fixed;
 	}
 	h2 {
 		margin-bottom: 20px;
@@ -283,96 +265,102 @@ footer,
 			margin-bottom: 40px;
 		}
 		@include media($desktop) {
-			max-width: 550px;
-			font-size: 44px;
-			line-height: 47px;
+			font-size: 50px;
+			line-height: 55px;
 		}
+	}
+	p a {
+		text-decoration: underline;
+		color: $primaryColor;
 	}
 	.doc-content {
-		@include media($desktop) {
-			max-width: 600px;
+		@include media($tablet) {
+			padding-right: 55%;
 		}
-		@include media($full) {
-			
+		@include media(900px) {
+			padding-right: 45%;
+		}
+
+		@include media($desktop) {
+			padding-right: 55%;
 		}
 		img.doc-image {
-			display: block;
-			float: left; 
-			margin-right: 20px;
-			margin-bottom: 40px;
-			width: 90px;
-			// width: 100%;
-			// max-width: 350px;
+			width: 200px;
+			position: absolute;
+			bottom: 0px;
+			right: -20px;
+			z-index: 2;
+			@include media(480px) {
+				right: calc(50% - 200px;);
+			}
 			@include media($tablet) {
-				max-width: none;
-				width: auto;
-				margin-right: 40px;
-				margin-bottom: 40px;
+				width: 350px;
+				position: absolute;
+				right: calc(50% - 350px;);
+				bottom: 248px;
+			}
+			@include media(900px) {
+				bottom: 120px;
+				right: 30px;
+				width: 360px;
+
 			}
 			@include media($desktop) {
-				display: none;
+				width: auto;
+				position: absolute;
+				bottom: -150px;
+				right: calc(50% - 550px;)
 			}
 		}
 	}
-	.button {
-		margin: 0 auto;
-		text-align: center;
-		display: block;
-		max-width: 230px;
-		padding-right: 40px;
-		margin-top: 30px;
-		@include media($desktop) {
-			margin: 0;
-			margin-top: 30px;
-		}
-		&:after {
-			content: '';
-			position: absolute;
-			left: calc(50% + 75px;);
-			top: 14px;
-			background-image: url('images/icon-bio.png');
-			background-size: 18px 24px;
-			width: 18px;
-			height: 24px;
-			z-index: 1;
-		}
-		&:hover {
-			background: $primaryColor !important;
-			color: $lightColor !important;
-		}
-	}
-	ul {
-		list-style: none;
-		display: flex;
-		margin-top: 40px;
+
+	.doctors-buttons {
+		z-index: 2000px;
+		margin-top: 100px;
 		width: 100%;
-		justify-content: center;
+		background: $secondaryColor;
+		padding: 20px;
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+		width: calc(100% + 40px);
+		left: -20px;
+		position: relative;
+		z-index: 1;
+	}
+	.doctors-buttons-again {
+		transition: all .35s ease-in-out;
+		padding: 15px;
+		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+		background: transparent;
+		border: 1px solid rgba($lightColor, .3);
+		display: flex;
+		flex-wrap: wrap;
 		@include media($tablet) {
-			margin-top: 60px;
+			flex-wrap: nowrap;
 		}
 		@include media($desktop) {
-			margin-bottom: 40px;
+			
 		}
-		@include media($full) {
-			margin-top: 0px;
-			top: 120px;
-			width: 175px;
-			height: 400px;
-			flex-wrap: wrap;
-			justify-content: center;
-			position: absolute;
-			right: calc( 50% - 650px );
-		}
-		li {
-			margin: 0 10px;
-			img {
-				width: 100%;
-				@include media($tablet) {
-					width: auto;
-				}
+		a {
+			width: 100%;
+			padding: 10px 0px;
+			font-family: $secondaryFont;
+			color: $primaryColor;
+			text-decoration: none;
+			font-size: 18px;
+			@include media($tablet) {
+				width: auto;
+				font-size: 28px;
+				padding: 10px 40px;
+				border-right: 1px solid rgba($lightColor,.3) ;
 			}
-			@include media($full) {
-				margin: 0;
+			span {
+				font-family: $primaryFont;
+				display: block;
+				font-size: 12px;
+				@include media($tablet) {
+					font-size: 16px;
+					
+				}
 			}
 		}
 	}
@@ -735,6 +723,7 @@ footer,
 	}
 	.the-results {
 		margin-top: 60px;
+		width: 100%;
 		@include media($desktop) {
 			margin-top: 0;
 			margin-left: 80px;
@@ -745,8 +734,12 @@ footer,
 		}
 		
 		img {
+			width: 100%;
 			box-shadow: 10px 10px 15px rgba($primaryColor, .3);
 			border: 10px solid $lightColor;
+			@include media($tablet) {
+				width: auto;
+			}
 			&:first-of-type {
 				margin-right: 40px;
 			}
@@ -757,6 +750,7 @@ footer,
 		}
 	}
 	.results-images {
+		width: 100%;
 		display: flex;
 		justify-content: center;
 	}

@@ -43,10 +43,9 @@
 	</div>
 </div> 
 
-<!-- 
-<section class="home-doctor">
+<section class="home-doctor will-parallax home-doctor-parallax">
 	<div class="doc-content">
-		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctor.jpg" alt="doctor" class="doc-image">
+		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image">
 		<h2><?php the_field('doctor_head'); ?></h2>
 		<?php the_field('doctor_cont'); ?>
 		<?php if(have_rows('doctor_logos')): ?>
@@ -58,11 +57,15 @@
 				<?php endwhile; ?>
 			</ul>
 		<?php endif; ?>
-		<a href="<?php the_field('doctor_bio_button'); ?>" class="button" rel="nofollow">Read My Biography</a>
+	</div>
+	<div class="doctors-buttons">
+		<div class="doctors-buttons-again">
+			<a href="<?php the_field('doctor_bio_button'); ?>" rel="nofollow">Lori G. Polacek, MD <span>Board-Certified Plastic Surgeon</span> </a>
+			<a href="<?php the_field('doctor_bio_button'); ?>" rel="nofollow">Beth Walker <span> Medical Aesthetician </span> </a> 
+		</div>
 	</div>
 </section>
 
--->
 
 <section class="home-why-choose">
 	<div class="choosy-border"></div>
@@ -111,7 +114,7 @@
 	<?php endif; ?>
 </div>
 
-<section class="home-reviews">
+<section class="home-reviews will-parallax home-reviews-parallax">
 	<div class="the-review-box">
 		<div class="the-review">
 			<div class="the-stars">

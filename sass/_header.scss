@@ -96,11 +96,12 @@
 
 .int-header {
 	background-color: #375364;
-	background-position: center right;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 250px;
-	background-position-y: 50px; 
+	// background-position-y: 50px; 
+	margin-top: 70px;
 
 
 	@include media($tablet) {
@@ -109,9 +110,6 @@
 	@include media($desktop) {
 
 	}
-	// @include media($full) {
-	// 	height: 600px;
-	// }
 }
 
 .inside-header-logo {
