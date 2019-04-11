@@ -97,32 +97,127 @@
 
 .int-header {
 	background-color: #3e5d6f;
-	background-position: center right;
+	background-position: top right;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 200px;
-	margin-top: 50px;
+	height: 290px;
+	padding-top: 50px;
+	background-position-y: 128px;
 	@include media($tablet) {
+		background-position: center right;
+		background-position-y: 50px;
+		padding-top: 0;
 		background-size: cover;
 		height: 500px;
-		margin-top: 70px;
 	}
 	@include media($desktop) {
+		height: 430px;
+		margin-top: 70px;
 		background-position: center center;
 	}
 }
 
+
+
 .inside-header-logo {
-	float: left;
-	margin-top: 100px;
+	position: relative;
+	width: calc( 100% + 40px);
+	left: -20px;
+	background: #466679;
 	@include media($tablet) {
-		margin-top: 200px;
+		left: 0px;
+		background: transparent;
+		padding: 0;
+		margin-bottom: 0;
+		background: transparent;
+		max-width: 365px;
+		padding-top: 100px;
 	}
-	img {
+	@include media($desktop) {
+		padding-top: 60px;
+	}
+	svg {
 		width: 180px;
+		height: 71px;
 		@include media($tablet) {
-			width: auto;
+			width: 358px;
+			height: auto;
 		}
+		path {fill:$lightColor;}
+	}
+	a {
+		text-decoration: none;
+	}
+	span {
+		font-family: $secondaryFont;
+		display: block;
+		font-size: 16px;
+		display: none;
+		@include media($tablet) {
+			display: block;
+			font-size: 30px;
+		}
+		&:nth-of-type(1) {
+			@include media($tablet) {
+				margin-top: 20px;
+			}
+		}
+
+		&:nth-of-type(2) {
+			color: $primaryHighlight;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+			@include media($tablet) {
+				letter-spacing: 2.8px;
+			}
+		}
+	}
+	.logo-line-top {
+		width: 190px;
+		margin: 0 auto;
+		height: 1px;
+		background-color: $lightColor;
+		display: none;
+		@include media($tablet) {
+			display: block;
+			width: 100%;
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+	}
+	.logo-line-bottom {
+		width: 80px;
+		margin: 0 auto;
+		height: 1px;
+		background-color: $lightColor;
+		margin-top: 20px;
+		margin-bottom: 10px;
+		display: none;
+		@include media($tablet) {
+			display: block;
+		}
+	}
+
+}
+
+header .home-addy {
+	text-align: left;
+	margin-top: 10px;
+	margin-bottom: 25px;
+	display: none;
+	font-size: 15.5px;
+	@include media($tablet) {
+		display: block;
+	}
+	a {
+		text-decoration: none;
+	}
+	i {
+		position: relative;
+		top: 3px;
+		color: $secondaryColor;
+		font-size: 24px;
+		margin-right: 10px;
 	}
 }
 

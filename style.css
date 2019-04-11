@@ -4532,46 +4532,166 @@ main,
 /* Inside Page Headers */
 .int-header {
   background-color: #3e5d6f;
-  background-position: center right;
+  background-position: top right;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
-  margin-top: 50px;
+  height: 290px;
+  padding-top: 50px;
+  background-position-y: 128px;
 }
 
 @media only screen and (min-width: 768px) {
   .int-header {
+    background-position: center right;
+    background-position-y: 50px;
+    padding-top: 0;
     background-size: cover;
     height: 500px;
-    margin-top: 70px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .int-header {
+    height: 430px;
+    margin-top: 70px;
     background-position: center center;
   }
 }
 
 .inside-header-logo {
-  float: left;
-  margin-top: 100px;
+  position: relative;
+  width: calc( 100% + 40px);
+  left: -20px;
+  background: #466679;
 }
 
 @media only screen and (min-width: 768px) {
   .inside-header-logo {
-    margin-top: 200px;
+    left: 0px;
+    background: transparent;
+    padding: 0;
+    margin-bottom: 0;
+    background: transparent;
+    max-width: 365px;
+    padding-top: 100px;
   }
 }
 
-.inside-header-logo img {
+@media only screen and (min-width: 1080px) {
+  .inside-header-logo {
+    padding-top: 60px;
+  }
+}
+
+.inside-header-logo svg {
   width: 180px;
+  height: 71px;
 }
 
 @media only screen and (min-width: 768px) {
-  .inside-header-logo img {
-    width: auto;
+  .inside-header-logo svg {
+    width: 358px;
+    height: auto;
   }
+}
+
+.inside-header-logo svg path {
+  fill: #ffffff;
+}
+
+.inside-header-logo a {
+  text-decoration: none;
+}
+
+.inside-header-logo span {
+  font-family: "Playfair Display", serif;
+  display: block;
+  font-size: 16px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .inside-header-logo span {
+    display: block;
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .inside-header-logo span:nth-of-type(1) {
+    margin-top: 20px;
+  }
+}
+
+.inside-header-logo span:nth-of-type(2) {
+  color: #7796b6;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media only screen and (min-width: 768px) {
+  .inside-header-logo span:nth-of-type(2) {
+    letter-spacing: 2.8px;
+  }
+}
+
+.inside-header-logo .logo-line-top {
+  width: 190px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #ffffff;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .inside-header-logo .logo-line-top {
+    display: block;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+}
+
+.inside-header-logo .logo-line-bottom {
+  width: 80px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .inside-header-logo .logo-line-bottom {
+    display: block;
+  }
+}
+
+header .home-addy {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  display: none;
+  font-size: 15.5px;
+}
+
+@media only screen and (min-width: 768px) {
+  header .home-addy {
+    display: block;
+  }
+}
+
+header .home-addy a {
+  text-decoration: none;
+}
+
+header .home-addy i {
+  position: relative;
+  top: 3px;
+  color: #e1ab4c;
+  font-size: 24px;
+  margin-right: 10px;
 }
 
 /* ------------------------

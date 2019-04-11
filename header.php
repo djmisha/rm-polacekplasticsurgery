@@ -57,10 +57,22 @@
 		<section>
 			<div class="inside-header-logo">
 				<a href="<?php bloginfo('url'); ?>">
-					<!-- <?php inline_svg('logo') ?> -->
-					<!-- <img src="<?php bloginfo('template_directory'); ?>/images/logo.png" alt="logo"> -->
+					<?php inline_svg('logo') ?>
+					<span>Non-Surgical Rejuvenation</span>
+					<div class="logo-line-top"></div>
+					<span>Lori G. Polacek, MD</span>
+					<div class="logo-line-bottom"></div>
 				</a>
 			</div>
+		<div class="home-addy">
+			<?php if(have_rows('locations', 'option')): ?>
+				<?php while(have_rows('locations', 'option')): the_row(); ?>
+					<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound" data-label="Address - Footer" target="_blank"  rel="noopener">
+						<i class="fas fa-map-marker-alt"></i> <?php the_sub_field('address', 'option'); ?> <?php the_sub_field('city', 'option'); ?>
+					</a>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</div>
 		</section>
 	<?php endif; ?>
 
