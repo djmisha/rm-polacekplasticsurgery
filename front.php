@@ -43,6 +43,7 @@
 	</div>
 </div> 
 
+
 <section class="home-doctor will-parallax home-doctor-parallax">
 	<div class="doc-content">
 		<img src="<?php bloginfo('template_directory'); ?>/images/img-doctors.png" alt="doctor" class="doc-image">
@@ -88,7 +89,6 @@
 </section>
 
 
-
 <div class="home-featured-procedures">
 	<?php if(have_rows('featured_procedures_1')): ?>
 		<?php $count = 3; ?>
@@ -114,6 +114,7 @@
 	<?php endif; ?>
 </div>
 
+
 <section class="home-reviews will-parallax home-reviews-parallax">
 	<div class="the-review-box">
 		<div class="the-review">
@@ -132,6 +133,7 @@
 		<a href="<?php the_field('leave_your_review_button'); ?>" class="button" rel="nofollow">Leave Your Review</a>
 	</div>
 </section>
+
 
 <section class="home-media-results">
 	<div class="the-media">

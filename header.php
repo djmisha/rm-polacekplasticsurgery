@@ -89,19 +89,17 @@
 		<?php elseif(this_is('gallery')): ?>
 			<h1>Plastic Surgery Before & After Photos</h1>
 		<?php elseif (get_post_type() =='news-room'): ?>
-			<div class="heading-text"> Newsroom </div>
+			<div class="heading-text">Newsroom</div>
 		<?php elseif (is_search()): ?>
-			<div class="heading-text"> Search Results </div>
+			<div class="heading-text">Search Results</div>
 		 <?php elseif (is_home() or is_archive()): ?>
-			<div class="heading-text"> Blog</div>
+			<div class="heading-text">Blog</div>
 		<?php elseif (is_single()): ?>
 			<h1><?php the_title(); ?></h1>
 			<div class="meta-data">Posted on <?the_time('M');?> <?the_time('j');?>, <? the_time('Y'); ?> <?php the_category(', '); ?></div>
-			
 		<?php else: ?> 
 			<h1><?the_title();?></h1>
 		<?php endif; ?>
-		<div class="page-title-line"></div>
 	</section>
 
 <?php endif; ?>

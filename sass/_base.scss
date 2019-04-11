@@ -3,7 +3,7 @@
 ------------------------ */
 
 html {
-	font: 15px/28px $defaultfont;
+	font: 17px/26px $defaultfont;
 	scroll-behavior: smooth;
 }
 
@@ -12,7 +12,7 @@ body {
 	background-color: $lightColor;
 	min-width: 320px;
 	text-align: center;
-	font: 15px/28px $defaultfont;
+	font: 17px/26px $defaultfont;
 	@include customfont();
 }
 
@@ -60,10 +60,10 @@ h6 {
 
 h2,
 .the-headline {
-	font-size: 22px;
+	font-size: 20px;
 	@include media($tablet) {
-		font-size: 40px;
-		line-height: 45px;
+		font-size: 34px;
+		line-height: 48px;
 	}
 	@include media($desktop) {
 		// font-size: 40px;
@@ -74,7 +74,7 @@ h2,
 h3 {
 	font-size: 20px;
 	@include media($tablet) {
-		font-size: 34px;
+		font-size: 30px;
 		line-height: 38px;
 	}
 }

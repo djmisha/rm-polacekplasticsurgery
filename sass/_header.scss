@@ -1,13 +1,14 @@
 /* Naviagation bar */
 
 .nav-bar {
+	background: rgba($lightColor, .9);
 	z-index: 9998;
 	position: relative;
+	display: block;
 	position: fixed;
 	top: 0px;
-	left: 0;
-	right: 0;
-	background: rgba($lightColor, 1);
+	left: 0px;
+	right: 0px;
 	height: 50px;
 	display: flex;
 	@include media($tablet) {
@@ -95,20 +96,19 @@
 /* Inside Page Headers */
 
 .int-header {
-	background-color: #375364;
-	background-position: center center;
+	background-color: #3e5d6f;
+	background-position: center right;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 250px;
-	// background-position-y: 50px; 
-	margin-top: 70px;
-
-
+	height: 200px;
+	margin-top: 50px;
 	@include media($tablet) {
-		height: 420px;
+		background-size: cover;
+		height: 500px;
+		margin-top: 70px;
 	}
 	@include media($desktop) {
-
+		background-position: center center;
 	}
 }
 

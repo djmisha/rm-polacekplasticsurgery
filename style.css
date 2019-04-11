@@ -4234,7 +4234,7 @@ img.aligncenter,
    Typography (and primary body style)
 ------------------------ */
 html {
-  font: 15px/28px "Lato", sans-serif;
+  font: 17px/26px "Lato", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -4243,7 +4243,7 @@ body {
   background-color: #ffffff;
   min-width: 320px;
   text-align: center;
-  font: 15px/28px "Lato", sans-serif;
+  font: 17px/26px "Lato", sans-serif;
 }
 
 p {
@@ -4280,14 +4280,14 @@ h6 {
 
 h2,
 .the-headline {
-  font-size: 22px;
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   h2,
   .the-headline {
-    font-size: 40px;
-    line-height: 45px;
+    font-size: 34px;
+    line-height: 48px;
   }
 }
 
@@ -4297,7 +4297,7 @@ h3 {
 
 @media only screen and (min-width: 768px) {
   h3 {
-    font-size: 34px;
+    font-size: 30px;
     line-height: 38px;
   }
 }
@@ -4405,13 +4405,14 @@ main,
 ------------------------ */
 /* Naviagation bar */
 .nav-bar {
+  background: rgba(255, 255, 255, 0.9);
   z-index: 9998;
   position: relative;
+  display: block;
   position: fixed;
   top: 0px;
-  left: 0;
-  right: 0;
-  background: white;
+  left: 0px;
+  right: 0px;
   height: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4530,17 +4531,25 @@ main,
 
 /* Inside Page Headers */
 .int-header {
-  background-color: #375364;
-  background-position: center center;
+  background-color: #3e5d6f;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 250px;
-  margin-top: 70px;
+  height: 200px;
+  margin-top: 50px;
 }
 
 @media only screen and (min-width: 768px) {
   .int-header {
-    height: 420px;
+    background-size: cover;
+    height: 500px;
+    margin-top: 70px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .int-header {
+    background-position: center center;
   }
 }
 
@@ -4929,6 +4938,7 @@ main,
 @media only screen and (min-width: 1080px) {
   .content {
     margin-bottom: 0;
+    max-width: 1280px;
   }
 }
 
@@ -4950,7 +4960,7 @@ main,
 .content h4,
 .content h5,
 .content h6 {
-  text-align: center;
+  text-align: left;
   color: #424a4f;
   font-family: "Playfair Display", serif;
   font-weight: 100;
@@ -4958,19 +4968,17 @@ main,
 }
 
 .page-title {
-  text-align: center;
+  text-align: left;
   position: relative;
   padding-bottom: 0;
   margin-top: 30px;
-  margin-bottom: 40px;
-  width: auto;
+  width: 100%;
   display: inline-block;
 }
 
 @media only screen and (min-width: 768px) {
   .page-title {
     margin-top: 55px;
-    margin-bottom: 65px;
   }
 }
 
@@ -4979,30 +4987,21 @@ main,
   margin-top: 0;
   margin-bottom: 0;
   font-family: "Playfair Display", serif;
-  padding-left: 20px;
-  padding-right: 20px;
-  text-align: center;
   font-size: 28px;
   line-height: 26px;
   font-weight: 400;
   color: #424a4f;
   display: block !important;
   padding-bottom: 30px;
+  text-align: left;
 }
 
 @media only screen and (min-width: 768px) {
   .page-title .heading-text,
   .page-title h1 {
-    font-size: 44px;
-    line-height: 55px;
+    font-size: 40px;
+    line-height: 46px;
   }
-}
-
-.page-title .page-title-line {
-  height: 2px;
-  background: #424a4f;
-  width: 150px;
-  margin: 0 auto;
 }
 
 .site-crumbs {
