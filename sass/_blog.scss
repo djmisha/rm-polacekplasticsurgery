@@ -52,13 +52,14 @@
 			border: 1px solid #ccc;
 			overflow: hidden;
 			width: 150px;
-			float: left;
-			margin-right: 20px;
+			float: right;
+			margin-left: 20px;
 			position: relative;
 			margin-bottom: 20px;
 			@include media($tablet) {
 				width: 350px;
-				margin-right: 50px;
+				margin-top: -70px;
+				margin-left: 50px;
 			}
 			img {
 				width: 100%;
@@ -69,9 +70,12 @@
 			padding-top: 40px;
 			padding-bottom: 40px;
 			@include media($tablet) {
-				padding-top: 60px;
+				// padding-top: 60px;
 				padding-bottom: 60px;
 				width: 100%;
+			}
+			&:first-of-type {
+				padding-top: 0px;
 			}
 			h2 {
 				margin-top: 0;
@@ -96,21 +100,18 @@
 		}
 	}
 	.meta-data {
-		margin-top: 10px;
+		// margin-top: 10px;
 		width: auto;
 		display: inline-block;
-		padding-bottom: 5px;
-		border-bottom: 2px solid $primaryColor;
 		margin-bottom: 0px;
 		color: $primaryColor;
-		font-family: $secondaryFont !important;
-		// letter-spacing: 1px;
-		font-size: 15px;
+		font-size: 14px;
+		font-style: italic;
 		@include media($tablet) {
-			font-size: 18px;
+			// font-size: 18px;
 		}
 		a {
-			text-decoration: none;
+			text-decoration: underline;
 			font-family: $secondaryFont !important;
 			color: $primaryColor !important;
 		}
@@ -128,36 +129,27 @@
 		text-decoration: none;
 	}
 	h1 {
-		font-family: $secondaryFont;
-		color: $primaryColor;
-		font-size: 30px;
-		margin-bottom: 10px;
-		font-weight: 100;
-		text-align: center;
-		margin-top: 0;
-		@include media($tablet) {
-			font-size: 44px;
-			line-height: 47px;
-		}
+
 	}
 	.meta-data {
-		text-align: center;
+		text-align: left;
 		// border: 1px solid red;
 		margin: 0 auto;
-		margin-top: 10px;
+		// margin-top: 10px;
 		// width: auto;
 		display: block;
-		max-width: 500px;
-		padding-bottom: 5px;
+		// max-width: 500px;
+		padding-bottom: 15px;
 		// border-bottom: 2px solid $primaryColor;
 		color: $primaryColor;
 		font-family: $secondaryFont !important;
 		font-size: 15px;
+		font-style: italic;
 		@include media($tablet) {
-			font-size: 18px;
+			// font-size: 18px;
 		}
 		a {
-			text-decoration: none;
+			text-decoration: underline;
 			font-family: $secondaryFont !important;
 			color: $primaryColor !important;
 		}
@@ -185,7 +177,7 @@
 			&:hover {
 				color: $lightColor;
 				i {
-					color: $darkColor;
+					color: $lightColor;
 				}
 			}
 		}
@@ -204,7 +196,7 @@
 		&:hover {
 			color: $lightColor;
 			&:before {
-				color: $darkColor;
+				color: $lightColor;
 			}
 		}
 	}
