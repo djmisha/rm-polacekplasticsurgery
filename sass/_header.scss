@@ -23,8 +23,8 @@
 
 
 .menu-trigger {
-	@include media($desktop) {
-		display: none;
+	.is--ipad & {
+		display: block;
 	}
 	width: 32px;
 	height: 100%;

@@ -69,7 +69,6 @@ footer,
 		min-height: 600px;
 	}
 	a {
-		// color: $darkColor;
 		text-decoration: none;
 	}
 	.home-logo {
@@ -543,7 +542,7 @@ footer,
 			margin-left: 6px;
 		}
 	}
-	p {
+	p, span {
 		font-family: $secondaryFont;
 		font-size: 18px;
 		line-height: 30px;
@@ -561,6 +560,7 @@ footer,
 			font-style: normal;
 		}
 	}
+
 	.button {
 		border: 1px solid rgba($lightColor, .7);
 		margin-top: 20px;
@@ -568,7 +568,6 @@ footer,
 		&:first-of-type {
 			@include media($tablet) {
 				margin-right: 20px;
-				
 			}
 		}
 	}

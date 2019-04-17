@@ -60,10 +60,10 @@ h6 {
 
 h2,
 .the-headline {
-	font-size: 20px;
+	font-size: 30px;
 	@include media($tablet) {
-		font-size: 34px;
-		line-height: 48px;
+		font-size: 40px;
+		line-height: 46px;
 	}
 	@include media($desktop) {
 		// font-size: 40px;
@@ -72,15 +72,15 @@ h2,
 }
 
 h3 {
-	font-size: 20px;
+	font-size: 26px;
 	@include media($tablet) {
-		font-size: 30px;
-		line-height: 38px;
+		font-size: 34px;
+		line-height: 48px;
 	}
 }
 
 h4 {
-	font-size: 18px;
+	font-size: 24px;
 	@include media($desktop) {
 		font-size: 30px;
 	}
@@ -88,7 +88,7 @@ h4 {
 
 h5,
 h6 {
-	font-size: 18px;
+	font-size: 22px;
 	@include media($desktop) {
 		font-size: 28px;
 	}

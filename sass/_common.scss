@@ -82,13 +82,16 @@ img.aligncenter,
 	padding: 17px 30px;
 	// border-radius: 4px;
 	transition: all 0.2s ease-in-out;
-	background: $secondaryColor;
-	// box-shadow: 0px 10px 20px rgba($primaryColor, 0.4);
-
+	border: 1px solid rgba($lightColor, .3);
+	background: rgb(189,129,62);
+	background: linear-gradient(164deg, rgba(189,129,62,1) 19%, rgba(164,112,54,1) 56%); 
+	box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+	
 	&:hover {
 		text-decoration: none;
-		// color: $darkColor !important;
-		background: $primaryColor;
+		background: #91602a;
+		background: linear-gradient(164deg, rgba(145,96,42,1) 19%, rgba(145,96,42,1) 56%); 
+		
 	}
 }
 

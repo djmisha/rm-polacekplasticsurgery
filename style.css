@@ -3809,7 +3809,11 @@ img.alignleft {
   padding: 17px 30px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: #e1ab4c;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #bd813e;
+  background: linear-gradient(164deg, #bd813e 19%, #a47036 56%);
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
 }
 
 .button:hover,
@@ -3818,7 +3822,8 @@ img.alignleft {
 .next-prev a:hover,
 .after-review-sprinkle .button:hover {
   text-decoration: none;
-  background: #424a4f;
+  background: #91602a;
+  background: linear-gradient(164deg, #91602a 19%, #91602a 56%);
 }
 
 .after-review-sprinkle .button:hover {
@@ -4280,30 +4285,30 @@ h6 {
 
 h2,
 .the-headline {
-  font-size: 20px;
+  font-size: 30px;
 }
 
 @media only screen and (min-width: 768px) {
   h2,
   .the-headline {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+h3 {
+  font-size: 26px;
+}
+
+@media only screen and (min-width: 768px) {
+  h3 {
     font-size: 34px;
     line-height: 48px;
   }
 }
 
-h3 {
-  font-size: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  h3 {
-    font-size: 30px;
-    line-height: 38px;
-  }
-}
-
 h4 {
-  font-size: 18px;
+  font-size: 24px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -4314,7 +4319,7 @@ h4 {
 
 h5,
 h6 {
-  font-size: 18px;
+  font-size: 22px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -4442,10 +4447,8 @@ main,
   height: 100%;
 }
 
-@media only screen and (min-width: 1080px) {
-  .menu-trigger {
-    display: none;
-  }
+.is--ipad .menu-trigger {
+  display: block;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -5058,17 +5061,17 @@ header .home-addy i {
 @media only screen and (min-width: 1080px) {
   .content {
     margin-bottom: 0;
-    max-width: 1280px;
   }
 }
 
 .content a {
   text-decoration: underline;
-  color: #424a4f;
+  color: #5191b6;
 }
 
 .content a:hover {
-  color: #424a4f;
+  text-decoration: underline !important;
+  color: #e1ab4c;
 }
 
 .content h2 {
@@ -5084,7 +5087,15 @@ header .home-addy i {
   color: #424a4f;
   font-family: "Playfair Display", serif;
   font-weight: 100;
-  margin-top: 40px;
+  margin-top: 70px;
+}
+
+article > h2 {
+  margin-top: 0 !important;
+}
+
+article p ~ h2 {
+  margin-top: 70px !important;
 }
 
 .page-title {
@@ -5098,7 +5109,7 @@ header .home-addy i {
 
 @media only screen and (min-width: 768px) {
   .page-title {
-    margin-top: 55px;
+    margin-top: 65px;
   }
 }
 
@@ -5107,8 +5118,8 @@ header .home-addy i {
   margin-top: 0;
   margin-bottom: 0;
   font-family: "Playfair Display", serif;
-  font-size: 28px;
-  line-height: 26px;
+  font-size: 40px;
+  line-height: 48px;
   font-weight: 400;
   color: #424a4f;
   display: block !important;
@@ -5119,8 +5130,8 @@ header .home-addy i {
 @media only screen and (min-width: 768px) {
   .page-title .heading-text,
   .page-title h1 {
-    font-size: 40px;
-    line-height: 46px;
+    font-size: 50px;
+    line-height: 58px;
   }
 }
 
@@ -5173,6 +5184,16 @@ header .home-addy i {
   color: #ffffff;
 }
 
+body.inside {
+  background: url("images/bg-inside.jpg") top center;
+}
+
+@media only screen and (min-width: 768px) {
+  body.inside {
+    background-attachment: fixed;
+  }
+}
+
 .interior {
   text-align: left;
   padding-bottom: 60px;
@@ -5216,12 +5237,12 @@ header .home-addy i {
 
 .interior .content ul li:before {
   content: "";
-  color: #d8e1bf;
-  background-color: #d8e1bf;
+  color: #e1ab4c;
+  background-color: #e1ab4c;
   font-weight: 700;
   position: absolute;
   left: 0px;
-  top: 12px;
+  top: 10px;
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -5230,73 +5251,6 @@ header .home-addy i {
 .interior .content ul ul,
 .interior .content ul ul ul {
   margin: 1em 20px;
-}
-
-.interior .content .styled-links-border {
-  display: block;
-  padding: 20px;
-  background: #d8e1bf;
-  margin: 20px 0;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .content .styled-links-border {
-    margin: 60px 0;
-  }
-}
-
-.interior .content ul.styled-links {
-  border: 1px solid rgba(66, 74, 79, 0.3);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  padding: 40px;
-  font-family: "Playfair Display", serif;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .content ul.styled-links {
-    margin: 0;
-  }
-}
-
-.interior .content ul.styled-links li {
-  margin-left: 20px;
-  margin-right: 20px;
-  font-size: 16px;
-}
-
-@media only screen and (min-width: 768px) {
-  .interior .content ul.styled-links li {
-    font-size: 18px;
-  }
-}
-
-.interior .content ul.styled-links li:before {
-  content: "\f0c1" !important;
-  top: 0px;
-  background: transparent;
-  font-family: "Font Awesome 5 Pro";
-  position: absolute;
-  left: 5px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-  color: #59646b;
-}
-
-.interior .content ul.styled-links li a {
-  text-decoration: none;
-  color: #424a4f;
-}
-
-.interior .content ul.styled-links li a:hover {
-  border-bottom: 2px solid #424a4f;
 }
 
 .interior .content ol {
@@ -5322,7 +5276,7 @@ header .home-addy i {
   position: absolute;
   content: counter(item) ". ";
   counter-increment: item;
-  color: #d8e1bf;
+  color: #e1ab4c;
   font-weight: bold;
 }
 
@@ -5392,11 +5346,27 @@ header .home-addy i {
 
 @media only screen and (min-width: 1480px) {
   .full-width {
-    left: calc(((140px + (50vw - (1480px / 2)))) * -1);
+    left: calc(((40px + (50vw - (1480px / 2)))) * -1);
+  }
+}
+
+.page-feature-border {
+  margin: 40px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-feature-border {
+    -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+            box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+    padding: 20px 20px;
+    margin: 100px 0;
   }
 }
 
 .page-feature {
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5421,7 +5391,7 @@ header .home-addy i {
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-image {
-    min-height: 600px;
+    min-height: 450px;
   }
 }
 
@@ -5443,32 +5413,8 @@ header .home-addy i {
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-content {
-    background: #d8e1bf;
+    background: #ebf7ff;
     padding: 60px 40px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-feature .feature-content {
-    padding: 100px 40px;
-  }
-}
-
-@media only screen and (min-width: 1480px) {
-  .page-feature .feature-content {
-    padding: 150px 40px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .page-feature .feature-content .feature-border {
-    padding-left: 40px;
-    padding-right: 40px;
-    max-width: 550px;
-    margin: 0 auto !important;
-    border: 1px solid rgba(66, 74, 79, 0.3);
-    padding-top: 60px;
-    padding-bottom: 60px;
   }
 }
 
@@ -5485,7 +5431,6 @@ header .home-addy i {
   .page-feature .feature-content h2,
   .page-feature .feature-content h3 {
     margin-top: 0;
-    max-width: 500px;
   }
 }
 
@@ -6960,48 +6905,47 @@ footer .footer-social a i {
 /* ------------------------
 	Forms & Form Elements
 ------------------------ */
-.contact .button {
+.contact-us .button {
   margin-bottom: 10px;
 }
 
-.contact .seaforms .type-checkbox input + label {
+.contact-us .seaforms .type-checkbox input + label {
   display: inline;
 }
 
-.contact .seaforms .type-text > p {
+.contact-us .seaforms .type-text > p {
   color: #424a4f;
   margin: 0;
   margin-bottom: 20px;
 }
 
-.contact h2 {
+.contact-us h2 {
   margin-top: 0;
 }
 
-.contact form .type-singlelinetext input,
-.contact form .type-singlelinetext textarea,
-.contact form .type-textarea input,
-.contact form .type-textarea textarea {
-  border: 2px solid #cba250 !important;
-  background: transparent !important;
+.contact-us form .type-singlelinetext input,
+.contact-us form .type-singlelinetext textarea,
+.contact-us form .type-textarea input,
+.contact-us form .type-textarea textarea {
+  border: 1px solid #d4d4d4 !important;
 }
 
-.contact .content {
+.contact-us .content {
   width: 100% !important;
   padding-right: 0;
 }
 
-.contact.thank-you .content {
+.contact-us.thank-you .content {
   padding-right: 50px;
 }
 
-.contact .contact-content {
+.contact-us .contact-content {
   width: 100%;
   text-align: left;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .contact-content {
+  .contact-us .contact-content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7009,7 +6953,7 @@ footer .footer-social a i {
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .contact-content section {
+  .contact-us .contact-content section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7018,39 +6962,39 @@ footer .footer-social a i {
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .contact-form {
+  .contact-us .contact-form {
     width: 50%;
     padding-right: 50px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .office-info {
+  .contact-us .office-info {
     width: 50%;
   }
 }
 
-.contact h2 {
+.contact-us h2 {
   font-size: 28px;
   font-size: 1.75rem;
 }
 
-.contact .the-address {
+.contact-us .the-address {
   margin-bottom: 40px;
 }
 
-.contact .gmaps {
+.contact-us .gmaps {
   width: 100%;
   margin-bottom: 16px;
 }
 
-.contact .gmaps iframe {
+.contact-us .gmaps iframe {
   width: 100%;
   height: 400px;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .addy-hours {
+  .contact-us .addy-hours {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -7060,20 +7004,20 @@ footer .footer-social a i {
   }
 }
 
-.contact .addy-hours strong {
+.contact-us .addy-hours strong {
   font-size: 16px;
 }
 
-.contact .address {
+.contact-us .address {
   width: 50%;
 }
 
-.contact .the-hours {
+.contact-us .the-hours {
   margin-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
-  .contact .the-hours {
+  .contact-us .the-hours {
     margin-top: 0px;
     width: 50%;
   }
@@ -7798,7 +7742,7 @@ footer .footer-social a i {
   margin-left: 6px;
 }
 
-.home-reviews p {
+.home-reviews p, .home-reviews span {
   font-family: "Playfair Display", serif;
   font-size: 18px;
   line-height: 30px;
@@ -7808,13 +7752,13 @@ footer .footer-social a i {
 }
 
 @media only screen and (min-width: 768px) {
-  .home-reviews p {
+  .home-reviews p, .home-reviews span {
     font-size: 30px;
     line-height: 45px;
   }
 }
 
-.home-reviews p strong {
+.home-reviews p strong, .home-reviews span strong {
   margin-top: 10px;
   display: block;
   font-style: normal;

@@ -9,7 +9,8 @@ function testimonial( $atts , $content = null ){
 
 ?>
 
-<section class="home-reviews">
+<div class="full-width">
+<section class="home-reviews will-parallax home-reviews-parallax">
 	<div class="the-review">
 		<h2><?php the_field('testimonial_headline'); ?></h2>
 		<div class="the-stars">
@@ -20,9 +21,10 @@ function testimonial( $atts , $content = null ){
 			<i class="fas fa-star"></i>
 		</div>
 		<?php the_field('testimonial_content'); ?>
-		<span class="button"><i class="fas fa-user-alt"></i> <?php the_field('testimonial_name'); ?> </span>
+		<span><i class="fas fa-user-alt"></i> <?php the_field('testimonial_name'); ?> </span>
 	</div>
 </section>
+</div>
 		
 <?php
 	$output = ob_get_contents();
