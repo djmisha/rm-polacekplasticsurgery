@@ -13,7 +13,7 @@
 
 
 		<div class="map-addy">
-			 <div class="footer-address" style="background-image: url('<?php bloginfo('template_directory'); ?>/images/icon-map.png');">
+			 <div class="footer-address">
 				<?php if(have_rows('locations', 'option')): ?>
 					<?php while(have_rows('locations', 'option')): the_row(); ?>
 						<div class="the-loc">

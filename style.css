@@ -3830,10 +3830,6 @@ img.alignleft {
   color: #e1ab4c;
 }
 
-.submit-btn {
-  background: #424a4f !important;
-}
-
 .disclaimer {
   font-size: 11px;
   font-style: italic;
@@ -4106,7 +4102,7 @@ img.aligncenter,
 .seaforms .type-textarea textarea {
   background: #fff;
   width: 100%;
-  border: 1px solid #edf2f4;
+  border: 1px solid #d4d4d4 !important;
   background: #edf2f4;
   font-size: 14px;
   padding: 16px 20px;
@@ -5147,8 +5143,8 @@ article p ~ h2 {
 
 @media only screen and (min-width: 768px) {
   .site-crumbs {
-    padding-top: 15px;
-    padding-bottom: 5px;
+    padding-top: 15px !important;
+    padding-bottom: 5px !important;
     font-size: 15px;
     line-height: 15px;
   }
@@ -6570,8 +6566,8 @@ footer {
   border-top: 1px solid #7796b6;
   border-bottom: 1px solid #7796b6;
   margin: 0 auto;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
 }
 
 @media only screen and (min-width: 1400px) {
@@ -6582,8 +6578,8 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
   }
 }
 
@@ -7341,6 +7337,10 @@ footer .footer-social a i {
   .welcome-bottom-row .button:nth-of-type(1) {
     margin-right: 10px;
   }
+}
+
+.welcome-bottom-row .button:nth-of-type(1):hover {
+  background: linear-gradient(135deg, #04233b 0%, #04233b 44%, #04233b 100%);
 }
 
 .welcome-bottom-row .button:nth-of-type(2) {
@@ -8774,6 +8774,12 @@ footer .footer-social a i {
   }
 }
 
+.tmpl_type_rmg_archive .category-slide {
+  margin-bottom: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #7796b6;
+}
+
 .tmpl_type_rmg_archive .bna-group {
   width: 45%;
   margin-bottom: 20px;
@@ -8911,7 +8917,7 @@ footer .footer-social a i {
 }
 
 .tmpl_type_rmg_archive .single-case {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -8919,16 +8925,18 @@ footer .footer-social a i {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 }
 
 .tmpl_type_rmg_archive .patient-details {
   text-align: left;
+  margin-top: 40px;
 }
 
 @media only screen and (min-width: 1080px) {
   .tmpl_type_rmg_archive .patient-details {
+    margin-top: 0px;
     max-width: 700px;
     margin-left: 40px;
   }

@@ -51,7 +51,7 @@
 		================================================================*/
 
 		// $(".tmpl_type_page_landing .site-crumbs").appendTo("header");
-		$(".tmpl_type_page_landing .page-title").appendTo("header");
+		// $(".tmpl_type_page_landing .page-title").appendTo("header");
 		// $(".tmpl_type_page_landing .flexible-jump-links").appendTo("header");
 
 		/*=======================================
@@ -98,7 +98,7 @@
 
 		/* Adds Fancybox */
 			
-		$(".the-testi a").attr("data-fancybox", "gallery");
+		// $(".the-testi a").attr("data-fancybox", "gallery");
 
 		
 		/*================================
@@ -151,34 +151,34 @@
 		=            Gallery Nudity Pop Up            =
 		=============================================*/
 
-		if ($("body.rmgallery-child").length) {
-			if ($.cookie("gallerypop") == null) {
-				console.log(theme_path);
-				$.fancybox.open({
-					src: theme_path + "/popup.php",
-					type: "ajax",
-					opts: {
-						scrolling: "no",
-						transitionEffect: "fade",
-						modal: true,
-						helpers: {
-							overlay: {
-								css: {
-									background: "rgba(0, 0, 0, 0.96)"
-								}
-							}
-						},
-						live: true,
-						afterClose: function() {
-							$.cookie("gallerypop", "rmg", {
-								expires: 1,
-								path: "/"
-							});
-						}
-					}
-				});
-			} //end cookies check
-		}
+		// if ($("body.rmgallery-child").length) {
+		// 	if ($.cookie("gallerypop") == null) {
+		// 		console.log(theme_path);
+		// 		$.fancybox.open({
+		// 			src: theme_path + "/popup.php",
+		// 			type: "ajax",
+		// 			opts: {
+		// 				scrolling: "no",
+		// 				transitionEffect: "fade",
+		// 				modal: true,
+		// 				helpers: {
+		// 					overlay: {
+		// 						css: {
+		// 							background: "rgba(0, 0, 0, 0.96)"
+		// 						}
+		// 					}
+		// 				},
+		// 				live: true,
+		// 				afterClose: function() {
+		// 					$.cookie("gallerypop", "rmg", {
+		// 						expires: 1,
+		// 						path: "/"
+		// 					});
+		// 				}
+		// 			}
+		// 		});
+		// 	} //end cookies check
+		// }
 		
 
 		/*=============================================
@@ -227,5 +227,24 @@
 		for (var i = 0; i < linksToTrack.length; i++) {
 			linksToTrack[i].addEventListener("click", trackOutboundLink, false);
 		}
+
+
+
+		/*========================================================
+		=            Specials Page form fill on click            =
+		========================================================*/
+		
+		
+		const redeemBtns = document.querySelectorAll('.news-specials .button');
+
+		redeemBtns.forEach(function(btn) {
+			btn.addEventListener("click", function(event) {
+				event.preventDefault();
+				let specialMessageText = "I'm interested in " + this.parentNode.getElementsByTagName('h2')[0].innerText;
+				const specialMessageArea = document.querySelector('#message-12');
+
+				specialMessageArea.value = specialMessageText;
+			});
+		});
 	}); // end of doc.ready
 })(jQuery);

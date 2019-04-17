@@ -8,6 +8,11 @@
 			margin-bottom: 60px;
 		}
 	}
+	.category-slide {
+		margin-bottom: 50px;
+		padding-bottom: 50px;
+		border-bottom: 1px solid $primaryHighlight;
+	}
 	.gallery-cat-wrap {
 
 	}
@@ -130,10 +135,10 @@
 
 	.single-case {
 		// border: 1px solid red;
-		margin-bottom: 40px;
+		margin-bottom: 80px;
 		@include media($desktop) {
 			display: flex;
-			margin-bottom: 60px;
+			margin-bottom: 80px;
 		}
 	}
 
@@ -146,8 +151,9 @@
 	// }
 	.patient-details {
 		text-align: left;
+		margin-top: 40px;
 		@include media($desktop) {
-			// float: right;
+			margin-top: 0px;
 			max-width: 700px;
 			margin-left: 40px;
 			// margin-top: -250px;

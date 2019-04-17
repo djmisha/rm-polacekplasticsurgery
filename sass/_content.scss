@@ -84,8 +84,8 @@ article p ~ h2 {
 	font-size: 10px;
 	line-height: 14px;
 	@include media($tablet) {
-		padding-top: 15px;
-		padding-bottom: 5px;
+		padding-top: 15px !important;
+		padding-bottom: 5px !important;
 		font-size: 15px;
 		line-height: 15px;
 	}

@@ -170,7 +170,9 @@ $errorcolor: darken($primaryColor, 20%);
 			background: #fff;
 			// box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.1) inset;
 			width: 100%;
-			border: 1px solid #edf2f4;
+			// border: 1px solid #edf2f4;
+				border: 1px solid rgba(#d4d4d4, 100%)  !important;
+			
 			background: #edf2f4;
 			// border: none;
 			font-size: 14px;

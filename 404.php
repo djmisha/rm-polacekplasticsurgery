@@ -14,7 +14,7 @@
 		}
 	
 		html {
-			background: #3b3f50; /* DARK color */
+			background: #424a4f; /* DARK color */
 			color: #fff; /* BODY text color */
 			font-family: 'OpenSans', sans-serif;
 			font-size: 36px;
@@ -63,8 +63,8 @@
 		}
 		
 		#four-oh-four-nav-wrap {
-			border-top: 20px solid #d8e1bf;  /* LIGHT color */
-			border-bottom: 20px solid #d8e1bf;  /* LIGHT color */
+			border-top: 20px solid #e1ab4c;  /* LIGHT color */
+			border-bottom: 20px solid #e1ab4c;  /* LIGHT color */
 			text-align:center;
 			width:100%;
 			background: #fff; /* LINKS background color */
@@ -113,7 +113,7 @@
 		
 		#four-oh-four-nav-wrap nav ul li a:hover {
 			text-decoration: none;
-			background-color: #d8e1bf;
+			background-color: #e1ab4c;
 		}
 		
 		.copy {
