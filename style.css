@@ -7210,7 +7210,6 @@ footer .footer-social a i {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: 1px solid red;
   margin-left: 20px;
   margin-right: 20px;
 }
