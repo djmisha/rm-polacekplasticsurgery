@@ -229,22 +229,26 @@
 		}
 
 
-
-		/*========================================================
-		=            Specials Page form fill on click            =
-		========================================================*/
 		
-		
-		const redeemBtns = document.querySelectorAll('.news-specials .button');
-
-		redeemBtns.forEach(function(btn) {
-			btn.addEventListener("click", function(event) {
-				event.preventDefault();
-				let specialMessageText = "I'm interested in " + this.parentNode.getElementsByTagName('h2')[0].innerText;
-				const specialMessageArea = document.querySelector('#message-12');
-
-				specialMessageArea.value = specialMessageText;
-			});
-		});
 	}); // end of doc.ready
 })(jQuery);
+	
+
+
+
+/*========================================================
+=            Specials Page form fill on click            =
+========================================================*/
+
+
+const redeemBtns = document.querySelectorAll('.news-specials .button');
+
+redeemBtns.forEach(function(btn) {
+	btn.addEventListener("click", function(event) {
+		let specialSlug = this.getAttribute('data-label');
+		let specialMessageText = "I'm interested in " +  specialSlug;
+		const specialMessageArea = document.querySelector('#message-12');
+
+		specialMessageArea.value = specialMessageText;
+	});
+});

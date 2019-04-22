@@ -2,6 +2,9 @@ $menuHeight : 70px;
 
 
 .hover-menu {
+	.duplicate-item {
+		display: none;
+	}
 	width: 100%;
 	// border: 1px solid black;
 	// @include font(18px, 1em);

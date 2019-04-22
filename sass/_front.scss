@@ -34,7 +34,7 @@ footer,
 	background-size: 620px auto;
 	background-position-y: 155px; 
 	z-index: 1000;
-	height: 760px;
+	height-min: 760px;
 	@include media(500px) {
 		background-size: 780px auto;
 	}
@@ -42,7 +42,7 @@ footer,
 		padding-top: 0;
 		background: #466679 url("images/bg-welcome.jpg") top center no-repeat;
 		background-size: 138% auto;
-		height: 550px;
+		// height: 550px;
 		max-height: none;
 	}
 	@include media($desktop) {
@@ -176,7 +176,6 @@ footer,
 		align-items: center;
 		flex-direction: column;
 		justify-content: flex-start;
-
 		background: rgba( #375364, 1);
 	}
 	@include media($desktop) {
@@ -275,6 +274,13 @@ footer,
 		text-decoration: underline;
 		color: $primaryColor;
 	}
+	a {
+		border: 1px solid transparent;
+		&:hover {
+			border: 1px solid rgba($lightColor, .2);
+			background: rgba($lightColor, .1);
+		}
+	}
 	.doc-content {
 		@include media($tablet) {
 			padding-right: 55%;
@@ -299,7 +305,7 @@ footer,
 				width: 350px;
 				position: absolute;
 				right: calc(50% - 350px;);
-				bottom: 248px;
+				bottom: 246px;
 			}
 			@include media(900px) {
 				bottom: 120px;
@@ -320,7 +326,7 @@ footer,
 		z-index: 2000px;
 		margin-top: 100px;
 		width: 100%;
-		background: $secondaryColor;
+		background: #bd813e;
 		padding: 20px;
 		box-shadow: 10px 10px 15px rgba($primaryColor, .3);
 		width: calc(100% + 40px);
@@ -346,7 +352,7 @@ footer,
 			width: 100%;
 			padding: 10px 0px;
 			font-family: $secondaryFont;
-			color: $primaryColor;
+			color: $lightColor;
 			text-decoration: none;
 			font-size: 18px;
 			@include media($tablet) {
@@ -479,7 +485,7 @@ footer,
 			}
 			.the-seth-button,
 			.the-seth-button-again {
-				background: $secondaryColor;
+				background: #bd813e;
 				box-shadow: 10px 10px 15px rgba($primaryColor, .3);
 
 			}
@@ -666,13 +672,16 @@ footer,
 			justify-content: space-between;
 			@include media($desktop) {
 				position: absolute;
-				bottom: -40px;
+				bottom: 80px;
 				right: calc(50% - 500px);
 			}
 			li {
 				width: 40%;
 				@include media($tablet) {
 					width: auto;
+				}
+				&:first-of-type {
+					margin-right: 20px;
 				}
 			}
 			img {
@@ -726,6 +735,7 @@ footer,
 	.the-results {
 		margin-top: 60px;
 		width: 100%;
+
 		@include media($desktop) {
 			margin-top: 0;
 			margin-left: 80px;
@@ -735,25 +745,36 @@ footer,
 			margin-left: 0;
 		}
 		
-		img {
-			width: 100%;
-			box-shadow: 10px 10px 15px rgba($primaryColor, .3);
-			border: 10px solid $lightColor;
-			@include media($tablet) {
-				width: auto;
-			}
-			&:first-of-type {
-				margin-right: 40px;
-			}
-		}
+		
 		.button {
 			margin-top: 40px;
 			width: 200px;
 		}
 	}
 	.results-images {
-		width: 100%;
+		width: auto;
+		// max-width: 200px;
 		display: flex;
+		align-items: center;
 		justify-content: center;
+		border: 1px solid red;
+		margin-left: 20px;
+		margin-right: 20px;
+		img {
+			width: 50%;
+			height: auto;
+			box-shadow: 10px 10px 15px rgba($primaryColor, .3);
+			border: 10px solid $lightColor;
+			@include media($tablet) {
+				width: 100%;
+				// width: auto;
+			}
+			&:first-of-type {
+				margin-right: 40px;
+				@include media($tablet) {
+					margin-right: 40px;
+				}
+			}
+		}
 	}
 }

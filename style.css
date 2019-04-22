@@ -4418,6 +4418,8 @@ main,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-shadow: 2px 2px 2px rgba(66, 74, 79, 0.2);
+          box-shadow: 2px 2px 2px rgba(66, 74, 79, 0.2);
 }
 
 @media only screen and (min-width: 768px) {
@@ -4531,27 +4533,28 @@ main,
 /* Inside Page Headers */
 .int-header {
   background-color: #3e5d6f;
-  background-position: top right;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 290px;
-  padding-top: 50px;
-  background-position-y: 128px;
+  height: 200px;
+  margin-top: 125px;
 }
 
 @media only screen and (min-width: 768px) {
   .int-header {
+    margin-top: 0;
     background-position: center right;
     background-position-y: 50px;
     padding-top: 0;
     background-size: cover;
-    height: 500px;
+    height: 430px;
+    padding-top: 30px;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .int-header {
-    height: 430px;
+    padding-top: 0;
     margin-top: 70px;
     background-position: center center;
   }
@@ -4561,18 +4564,20 @@ main,
   position: relative;
   width: calc( 100% + 40px);
   left: -20px;
+  top: -75px;
   background: #466679;
 }
 
 @media only screen and (min-width: 768px) {
   .inside-header-logo {
+    top: 0;
     left: 0px;
     background: transparent;
     padding: 0;
     margin-bottom: 0;
     background: transparent;
     max-width: 365px;
-    padding-top: 100px;
+    padding-top: 60px;
   }
 }
 
@@ -4786,7 +4791,7 @@ header .home-addy i {
 .touch-menu .nav-dropdown-button {
   position: absolute;
   z-index: 25;
-  width: 50px;
+  width: 100%;
   height: 50px;
   right: 0;
   top: 0px;
@@ -4805,8 +4810,7 @@ header .home-addy i {
   -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
-  left: 0;
-  right: 0;
+  right: 20px;
   margin: 0 auto;
   background-position: center;
   background-repeat: no-repeat;
@@ -4856,6 +4860,10 @@ header .home-addy i {
 .hover-menu {
   width: 100%;
   display: block;
+}
+
+.hover-menu .duplicate-item {
+  display: none;
 }
 
 .hover-menu .main-menu {
@@ -5370,6 +5378,7 @@ body.inside {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  background-repeat: no-repeat !important;
 }
 
 @media only screen and (min-width: 1080px) {
@@ -5378,6 +5387,7 @@ body.inside {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
+    background-size: cover !important;
   }
 }
 
@@ -5404,13 +5414,19 @@ body.inside {
 }
 
 .page-feature .feature-content {
+  background: #eaf7ff;
   padding: 20px;
 }
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-content {
-    background: #ebf7ff;
     padding: 60px 40px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .page-feature .feature-content {
+    background: transparent;
   }
 }
 
@@ -5609,835 +5625,8 @@ body.inside {
   padding-bottom: 0;
 }
 
-/* Breast Augmentation Page */
-.page-170 .jump-links-content {
-  display: none;
-}
-
-.page-170 #WhatisBreastAugmentation {
-  background-color: #faf9ec;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #WhatisBreastAugmentation {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .page-170 #WhatisBreastAugmentation .with-bg {
-    min-height: 600px;
-  }
-  .page-170 #WhatisBreastAugmentation > div {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 #WhatisBreastAugmentation {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .page-170 #WhatisBreastAugmentation > div {
-    width: 50%;
-  }
-}
-
-.page-170 #BreastAugmentationBenefits .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 #BreastAugmentationCandidates .two-column {
-    max-height: 350px;
-  }
-}
-
-.page-170 #BreastAugmentationCandidates .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #BreastAugmentationCandidates .page-title-line-custom {
-    margin-bottom: 60px;
-  }
-}
-
-.page-170 .view-gallery-callout {
-  text-align: center;
-  background-position: center right;
-  background-size: cover;
-  height: 200px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 .view-gallery-callout {
-    height: 350px;
-    background-size: cover;
-  }
-}
-
-.page-170 .view-gallery-callout .page-title-line-custom {
-  display: none;
-}
-
-.page-170 .view-gallery-callout h2 {
-  color: #ffffff !important;
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 .view-gallery-callout {
-    padding-right: 50%;
-  }
-}
-
-.page-170 .view-gallery-callout .button {
-  display: inline-block;
-  color: #424a4f !important;
-  background-color: #e1ab4c;
-}
-
-.page-170 #SalinevsSiliconeImplants .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #SalinevsSiliconeImplants > div {
-    width: 40%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 #SalinevsSiliconeImplants > div {
-    width: 45%;
-  }
-}
-
-.page-170 #TypesofBreastImplants {
-  text-align: left;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #TypesofBreastImplants {
-    padding-right: 35%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 #TypesofBreastImplants {
-    padding-right: 45%;
-  }
-}
-
-.page-170 #TypesofBreastImplants h2 {
-  text-align: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #TypesofBreastImplants .featured-content {
-    border: 1px solid rgba(66, 74, 79, 0.4);
-    padding: 60px;
-  }
-}
-
-.page-170 #ImplantSizeandShape {
-  color: #ffffff;
-  border: 1px solid rgba(66, 74, 79, 0.4);
-  text-align: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ImplantSizeandShape {
-    padding-bottom: 80px;
-  }
-}
-
-.page-170 #ImplantSizeandShape h2 {
-  color: #ffffff;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ImplantSizeandShape .featured-content {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 60px;
-  }
-}
-
-.page-170 #ImplantSizeandShape .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-}
-
-.page-170 #ImplantTypesTwo {
-  text-align: center;
-  padding-bottom: 80px !important;
-}
-
-.page-170 #ImplantTypesTwo > div:first-of-type {
-  margin-bottom: 60px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ImplantTypesTwo > div:first-of-type {
-    margin-bottom: 0;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ImplantTypesTwo > div {
-    width: 40%;
-  }
-}
-
-.page-170 #ImplantTypesTwo .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.page-170 #benefits-drawbacks {
-  text-align: center;
-  padding-top: 0px;
-  padding-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #benefits-drawbacks {
-    padding-bottom: 100px;
-  }
-}
-
-.page-170 #ImplantPlacement {
-  text-align: left;
-  background-size: cover;
-  background-size: auto 75vw;
-  background-position: top right;
-  padding-top: 75vw;
-  background-color: #faf9ec;
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 #ImplantPlacement {
-    padding-top: 100px;
-    background-position: center center;
-    background-size: auto auto;
-    padding-right: 45%;
-  }
-}
-
-.page-170 #ImplantPlacement h2 {
-  text-align: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ImplantPlacement .featured-content {
-    border: 1px solid rgba(66, 74, 79, 0.4);
-    padding: 60px;
-  }
-}
-
-.page-170 #IncisionPlacement {
-  text-align: center;
-}
-
-.page-170 #IncisionPlacement .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-}
-
-.page-170 #theIncisions {
-  padding-top: 0;
-}
-
-.page-170 #theIncisions h3 {
-  text-align: left;
-}
-
-.page-170 #theIncisions > div {
-  margin-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #theIncisions {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-  .page-170 #theIncisions > div {
-    width: 45%;
-    margin-bottom: 60px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 #theIncisions {
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-  .page-170 #theIncisions > div {
-    width: 20%;
-  }
-}
-
-.page-170 #BreastAugmentationProcedure {
-  color: #ffffff;
-  background-position-x: -900px;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 550px) {
-  .page-170 #BreastAugmentationProcedure {
-    background-size: cover;
-    background-position: center center;
-  }
-}
-
-.page-170 #BreastAugmentationProcedure .featured-content {
-  height: auto;
-}
-
-.page-170 #BreastAugmentationProcedure h2 {
-  color: #ffffff;
-}
-
-.page-170 #BreastAugmentationProcedure .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  background-color: #ffffff;
-}
-
-.page-170 #BreastAugmentationProcedure p a {
-  color: #ffffff;
-}
-
-.page-170 #FourBlock > div {
-  margin-bottom: 80px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #FourBlock {
-    -ms-flex-wrap: wrap !important;
-        flex-wrap: wrap !important;
-  }
-  .page-170 #FourBlock > div {
-    width: 46%;
-  }
-  .page-170 #FourBlock > div img {
-    margin-bottom: 40px;
-  }
-  .page-170 #FourBlock > div h2 {
-    font-size: 33px;
-    line-height: 37px;
-  }
-}
-
-.page-170 #ReflectionofYourFuture {
-  text-align: left;
-  color: #ffffff;
-  background-size: 700px auto;
-  padding-right: 45%;
-}
-
-@media only screen and (min-width: 450px) {
-  .page-170 #ReflectionofYourFuture {
-    background-size: 1000px auto;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ReflectionofYourFuture {
-    background-size: cover;
-  }
-}
-
-.page-170 #ReflectionofYourFuture h2 {
-  color: #ffffff;
-  text-align: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ReflectionofYourFuture .featured-content {
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    padding: 60px;
-  }
-}
-
-.page-170 #ReflectionofYourFuture .page-title-line-custom {
-  margin-bottom: 20px;
-  background-color: #ffffff;
-}
-
-.page-170 #ChoosingaBreastAugmentationSurgeon {
-  background-color: #faf9ec;
-}
-
-.page-170 #ChoosingaBreastAugmentationSurgeon .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #ChoosingaBreastAugmentationSurgeon h2, .page-170 #ChoosingaBreastAugmentationSurgeon p {
-    max-width: 820px;
-    margin: 0 auto;
-  }
-}
-
-.page-170 #FinalDoctorSection {
-  background-size: auto 450px;
-  background-position: top left;
-  padding-top: 470px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-170 #FinalDoctorSection {
-    background-size: auto 600px;
-    background-position: top left;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-170 #FinalDoctorSection {
-    padding-top: 100px;
-    background-size: auto 750px;
-    background-position: top center;
-    padding-left: 40%;
-  }
-}
-
-@media only screen and (min-width: 1480px) {
-  .page-170 #FinalDoctorSection {
-    background-size: cover;
-  }
-}
-
-.page-170 #FinalDoctorSection .featured-content {
-  background-color: #faf9ec;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-
-.page-170 #FinalDoctorSection .page-title-line-custom {
-  display: none;
-}
-
-.page-170 #FinalDoctorSection li {
-  margin-bottom: 20px;
-}
-
-/* Tummy Tuck Page */
-.page-187 #Tummy-Tuck-Candidates {
-  background-color: #faf9ec;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Tummy-Tuck-Candidates {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .page-187 #Tummy-Tuck-Candidates > div {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-187 #Tummy-Tuck-Candidates {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .page-187 #Tummy-Tuck-Candidates > div {
-    width: 50%;
-  }
-}
-
-.page-187 #Tummy-Tuck-Procedure {
-  background-color: #faf9e3;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Tummy-Tuck-Procedure {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .page-187 #Tummy-Tuck-Procedure > div {
-    width: 100%;
-    min-height: 600px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-187 #Tummy-Tuck-Procedure {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .page-187 #Tummy-Tuck-Procedure > div {
-    width: 50%;
-  }
-}
-
-.page-187 #TummyBNA {
-  background: url("images/bg-tummy-bna.jpg");
-  background-size: cover;
-}
-
-.page-187 #TummyTwoColumn h2 {
-  text-align: left;
-}
-
-.page-187 #TummyTwoColumn > div {
-  margin-bottom: 40px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #TummyTwoColumn > div {
-    margin-bottom: 0px;
-    width: 45%;
-  }
-}
-
-.page-187 #Abdominoplasty-Risks {
-  background-color: #faf9ec;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Abdominoplasty-Risks {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .page-187 #Abdominoplasty-Risks > div {
-    width: 100%;
-    min-height: 800px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-187 #Abdominoplasty-Risks {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .page-187 #Abdominoplasty-Risks > div {
-    width: 50%;
-  }
-}
-
-.page-187 #Tummy-Tuck-Recovery {
-  background-color: #faf9ec;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Tummy-Tuck-Recovery {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .page-187 #Tummy-Tuck-Recovery > div {
-    width: 100%;
-    min-height: 800px;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-187 #Tummy-Tuck-Recovery {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .page-187 #Tummy-Tuck-Recovery > div {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Results-Pregnancy > div {
-    width: 45%;
-  }
-}
-
-.page-187 #Results-Pregnancy > div h2 {
-  text-align: left;
-}
-
-.page-187 #Results-Pregnancy > div img {
-  margin-bottom: 40px;
-}
-
-.page-187 #Tummy-Tuck-and-Stretch-Marks {
-  color: #ffffff;
-  background-position: bottom right;
-}
-
-.page-187 #Tummy-Tuck-and-Stretch-Marks h2 {
-  color: #ffffff;
-}
-
-.page-187 #Tummy-Tuck-and-Stretch-Marks .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  background-color: #ffffff;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Tummy-Tuck-and-Stretch-Marks {
-    background-position: center center;
-  }
-  .page-187 #Tummy-Tuck-and-Stretch-Marks h2, .page-187 #Tummy-Tuck-and-Stretch-Marks p {
-    max-width: 820px;
-    margin: 0 auto;
-  }
-  .page-187 #Tummy-Tuck-and-Stretch-Marks p {
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Scars-Non-Surgical > div {
-    width: 45%;
-  }
-}
-
-.page-187 #Scars-Non-Surgical > div h2 {
-  text-align: left;
-}
-
-.page-187 #Scars-Non-Surgical > div img {
-  margin-bottom: 40px;
-}
-
-.page-187 #Tummy-Tuck-FAQ .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-.page-187 #Tummy-Tuck-FAQ h3 {
-  text-align: left;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Tummy-Tuck-Cost {
-    background-color: #faf9ec;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-}
-
-.page-187 #Tummy-Schedule {
-  background-color: #faf9ec;
-}
-
-.page-187 #Tummy-Schedule .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-187 #Tummy-Schedule {
-    background-position: center center;
-  }
-  .page-187 #Tummy-Schedule h2, .page-187 #Tummy-Schedule p {
-    max-width: 820px;
-    margin: 0 auto;
-  }
-}
-
-/*======================================
-=            Mommy Makeover            =
-======================================*/
-.page-201 #Mommy-Makeover-Candidates {
-  background-color: #faf9ec;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-201 #Mommy-Makeover-Candidates {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .page-201 #Mommy-Makeover-Candidates > div {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-201 #Mommy-Makeover-Candidates {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-  }
-  .page-201 #Mommy-Makeover-Candidates > div {
-    width: 50%;
-  }
-}
-
-.page-201 #mommy-gallery-bna {
-  height: 350px;
-  text-align: center;
-  background-position: center center;
-  background-position-x: -600px;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-201 #mommy-gallery-bna {
-    background-position: center center;
-    background-size: cover;
-  }
-}
-
-.page-201 #mommy-gallery-bna .page-title-line-custom {
-  display: none;
-}
-
-.page-201 #mommy-gallery-bna h2 {
-  color: #ffffff !important;
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-201 #mommy-gallery-bna {
-    padding-right: 50%;
-  }
-}
-
-.page-201 #mommy-gallery-bna .button {
-  display: inline-block;
-  color: #424a4f !important;
-  background-color: #e1ab4c;
-}
-
-.page-201 #Mommy-Makeover-Treatment-Options {
-  padding-bottom: 0;
-  text-align: center;
-}
-
-.page-201 #Mommy-Makeover-Treatment-Options .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-.page-201 #The-Treatment-Options {
-  padding-top: 40px;
-}
-
-.page-201 #The-Treatment-Options > div {
-  margin-bottom: 60px;
-}
-
-.page-201 #The-Treatment-Options > div h3 {
-  text-align: left;
-  font-size: 30px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-201 #The-Treatment-Options > div {
-    margin-bottom: 0px;
-    width: 48%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-201 #The-Treatment-Options > div {
-    width: 22%;
-  }
-}
-
-.page-201 #Mommy-Makeover-Recovery {
-  color: #ffffff;
-  background-position: center left;
-  background-position-x: -200px;
-  background-size: cover;
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-201 #Mommy-Makeover-Recovery {
-    background-size: cover;
-    background-position: center center;
-  }
-}
-
-.page-201 #Mommy-Makeover-Recovery h2 {
-  color: #ffffff;
-}
-
-.page-201 #Mommy-Makeover-Recovery .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-  background-color: #ffffff;
-}
-
-.page-201 #Mommy-Makeover-Tips {
-  background-color: #faf9ec;
-}
-
-.page-201 #Mommy-Makeover-Tips .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-.page-201 #Mommy-Makeover-Recovery-Tips-List {
-  background-color: #faf9ec;
-  padding-top: 0;
-}
-
-.page-201 #Mommy-Makeover-Recovery-Tips-List > div {
-  margin-bottom: 80px;
-}
-
-@media only screen and (min-width: 768px) {
-  .page-201 #Mommy-Makeover-Recovery-Tips-List > div {
-    width: 45%;
-  }
-}
-
-@media only screen and (min-width: 1080px) {
-  .page-201 #Mommy-Makeover-Recovery-Tips-List > div {
-    width: 22%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .page-201 #Scars-Cost > div {
-    width: 45%;
-  }
-}
-
-.page-201 #Scars-Cost .page-title-line-custom {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  margin-top: 30px;
-}
-
-.page-201 #Mommy-Contact {
-  background-color: #faf9ec;
+.news-specials form {
+  max-width: 600px;
 }
 
 /* ------------------------
@@ -7058,7 +6247,7 @@ footer .footer-social a i {
   background-size: 620px auto;
   background-position-y: 155px;
   z-index: 1000;
-  height: 760px;
+  height-min: 760px;
 }
 
 @media only screen and (min-width: 500px) {
@@ -7072,7 +6261,6 @@ footer .footer-social a i {
     padding-top: 0;
     background: #466679 url("images/bg-welcome.jpg") top center no-repeat;
     background-size: 138% auto;
-    height: 550px;
     max-height: none;
   }
 }
@@ -7396,6 +6584,15 @@ footer .footer-social a i {
   color: #424a4f;
 }
 
+.home-doctor a {
+  border: 1px solid transparent;
+}
+
+.home-doctor a:hover {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+
 @media only screen and (min-width: 768px) {
   .home-doctor .doc-content {
     padding-right: 55%;
@@ -7433,7 +6630,7 @@ footer .footer-social a i {
     width: 350px;
     position: absolute;
     right: calc(50% - 350px);
-    bottom: 248px;
+    bottom: 246px;
   }
 }
 
@@ -7458,7 +6655,7 @@ footer .footer-social a i {
   z-index: 2000px;
   margin-top: 100px;
   width: 100%;
-  background: #e1ab4c;
+  background: #bd813e;
   padding: 20px;
   -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
           box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
@@ -7494,7 +6691,7 @@ footer .footer-social a i {
   width: 100%;
   padding: 10px 0px;
   font-family: "Playfair Display", serif;
-  color: #424a4f;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px;
 }
@@ -7668,7 +6865,7 @@ footer .footer-social a i {
   }
   .home-featured-procedures li:hover .the-seth-button,
   .home-featured-procedures li:hover .the-seth-button-again {
-    background: #e1ab4c;
+    background: #bd813e;
     -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
             box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
   }
@@ -7893,7 +7090,7 @@ footer .footer-social a i {
 @media only screen and (min-width: 1080px) {
   .home-why-choose .why-choose-content ul {
     position: absolute;
-    bottom: -40px;
+    bottom: 80px;
     right: calc(50% - 500px);
   }
 }
@@ -7906,6 +7103,10 @@ footer .footer-social a i {
   .home-why-choose .why-choose-content ul li {
     width: auto;
   }
+}
+
+.home-why-choose .why-choose-content ul li:first-of-type {
+  margin-right: 20px;
 }
 
 .home-why-choose .why-choose-content ul img {
@@ -7993,36 +7194,49 @@ footer .footer-social a i {
   }
 }
 
-.home-media-results .the-results img {
-  width: 100%;
-  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
-          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
-  border: 10px solid #ffffff;
-}
-
-@media only screen and (min-width: 768px) {
-  .home-media-results .the-results img {
-    width: auto;
-  }
-}
-
-.home-media-results .the-results img:first-of-type {
-  margin-right: 40px;
-}
-
 .home-media-results .the-results .button {
   margin-top: 40px;
   width: 200px;
 }
 
 .home-media-results .results-images {
-  width: 100%;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border: 1px solid red;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.home-media-results .results-images img {
+  width: 50%;
+  height: auto;
+  -webkit-box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+          box-shadow: 10px 10px 15px rgba(66, 74, 79, 0.3);
+  border: 10px solid #ffffff;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-media-results .results-images img {
+    width: 100%;
+  }
+}
+
+.home-media-results .results-images img:first-of-type {
+  margin-right: 40px;
+}
+
+@media only screen and (min-width: 768px) {
+  .home-media-results .results-images img:first-of-type {
+    margin-right: 40px;
+  }
 }
 
 /* ------------------------

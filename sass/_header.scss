@@ -11,6 +11,7 @@
 	right: 0px;
 	height: 50px;
 	display: flex;
+		box-shadow: 2px 2px 2px rgba($darkColor, .2);
 	@include media($tablet) {
 		padding-left: 20px;
 		padding-right: 20px;
@@ -97,21 +98,23 @@
 
 .int-header {
 	background-color: #3e5d6f;
-	background-position: top right;
+	background-position: center right;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 290px;
-	padding-top: 50px;
-	background-position-y: 128px;
+	height: 200px;
+	margin-top: 125px;
 	@include media($tablet) {
+		margin-top: 0;
 		background-position: center right;
 		background-position-y: 50px;
 		padding-top: 0;
 		background-size: cover;
-		height: 500px;
+		height: 430px;
+		padding-top: 30px;
+
 	}
 	@include media($desktop) {
-		height: 430px;
+		padding-top: 0;
 		margin-top: 70px;
 		background-position: center center;
 	}
@@ -123,15 +126,17 @@
 	position: relative;
 	width: calc( 100% + 40px);
 	left: -20px;
+	top: -75px;
 	background: #466679;
 	@include media($tablet) {
+		top: 0;
 		left: 0px;
 		background: transparent;
 		padding: 0;
 		margin-bottom: 0;
 		background: transparent;
 		max-width: 365px;
-		padding-top: 100px;
+		padding-top: 60px;
 	}
 	@include media($desktop) {
 		padding-top: 60px;

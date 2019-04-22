@@ -9,11 +9,11 @@ function sc__feature( $atts , $content = null ){
 
 ?>
 		<div class="page-feature-border">
-			<div class="page-feature">
+			<div class="page-feature"  style="background: url(<?php the_field('callout_section_image'); ?>);" >
 				<div class="feature-content">
 					<?php the_field('callout_section_content'); ?>
 				</div>
-				<div class="feature-image" style="background: url(<?php the_field('callout_section_image'); ?>);" >
+				<div class="feature-image">
 					
 				</div>
 			</div>
