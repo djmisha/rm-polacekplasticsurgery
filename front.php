@@ -32,12 +32,11 @@
 			<div class="bottom-tag">
 				<h2>
 					<?php the_field('welcome_headline'); ?>
-					<!-- Focusing on Non-Surgical Rejuvenation, <strong> Lead by Board-Certified Plastic Surgeon Lori Polacek, MD </strong>  -->
 				</h2> 
 					</div>
 			<div class="bottom-buttons">
-				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-procedure.png" alt="icon">Procedures</a>
-				<a href="<?php the_field('schedule_a_consultation_link'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-calendar.png" alt="icon">Request an Appointment</a>
+				<a href="<?php the_field('procedures_button'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-procedure.png" alt="icon">Procedures</a>
+				<a href="<?php the_field('request_an_appointment_button'); ?>" class="button" rel="nofollow" rel="nofollow"><img src="<?php bloginfo('template_directory'); ?>/images/icon-calendar.png" alt="icon">Request an Appointment</a>
 			</div>
 		</div>
 	</div>
@@ -62,7 +61,7 @@
 	<div class="doctors-buttons">
 		<div class="doctors-buttons-again">
 			<a href="<?php the_field('doctor_bio_button'); ?>" rel="nofollow">Lori G. Polacek, MD <span>Board-Certified Plastic Surgeon</span> </a>
-			<a href="<?php the_field('doctor_bio_button'); ?>" rel="nofollow">Beth Walker <span> Medical Aesthetician </span> </a> 
+			<a href="<?php the_field('assistant_bio_button'); ?>" rel="nofollow">Beth Walker <span> Medical Aesthetician </span> </a> 
 		</div>
 	</div>
 </section>

@@ -3793,6 +3793,8 @@ img.alignleft {
 .buttons a,
 .submit-btn,
 .next-prev a,
+a.page-numbers,
+a.page-numbers.current,
 .after-review-sprinkle .button {
   cursor: pointer;
   display: inline-block;
@@ -3820,6 +3822,8 @@ img.alignleft {
 .buttons a:hover,
 .submit-btn:hover,
 .next-prev a:hover,
+a.page-numbers:hover,
+a.page-numbers.current:hover,
 .after-review-sprinkle .button:hover {
   text-decoration: none;
   background: #91602a;
@@ -5068,13 +5072,13 @@ header .home-addy i {
   }
 }
 
-.content a {
+.content p a, .content li a {
   text-decoration: underline;
   color: #5191b6;
 }
 
-.content a:hover {
-  text-decoration: underline !important;
+.content p a:hover, .content li a:hover {
+  text-decoration: underline;
   color: #e1ab4c;
 }
 
@@ -5671,7 +5675,7 @@ aside li {
   font-family: "Playfair Display", serif;
   font-size: 25px;
   color: #424a4f;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   padding-top: 5px;
   text-align: center;
 }
@@ -6588,9 +6592,11 @@ footer .footer-social a i {
   border: 1px solid transparent;
 }
 
-.home-doctor a:hover {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
+@media only screen and (min-width: 768px) {
+  .home-doctor a:hover {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -6612,11 +6618,17 @@ footer .footer-social a i {
 }
 
 .home-doctor .doc-content img.doc-image {
-  width: 200px;
+  width: 140px;
   position: absolute;
   bottom: 0px;
   right: -20px;
   z-index: 2;
+}
+
+@media only screen and (min-width: 375px) {
+  .home-doctor .doc-content img.doc-image {
+    width: 180px;
+  }
 }
 
 @media only screen and (min-width: 480px) {
@@ -7292,6 +7304,15 @@ footer .footer-social a i {
   }
 }
 
+@media only screen and (min-width: 1080px) {
+  .blog .content h2,
+  .tmpl_type_category .content h2,
+  .tmpl_type_archive .content h2,
+  .tmpl_type_index .content h2 {
+    max-width: 950px;
+  }
+}
+
 .blog .content h2 a,
 .tmpl_type_category .content h2 a,
 .tmpl_type_archive .content h2 a,
@@ -7349,8 +7370,18 @@ footer .footer-social a i {
   .tmpl_type_archive .post-snippet .thumb,
   .tmpl_type_index .post-snippet .thumb {
     width: 350px;
-    margin-top: -70px;
+    margin-top: -30px;
     margin-left: 50px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .blog .post-snippet .thumb,
+  .tmpl_type_category .post-snippet .thumb,
+  .tmpl_type_archive .post-snippet .thumb,
+  .tmpl_type_index .post-snippet .thumb {
+    margin-left: 80px;
+    margin-top: -70px;
   }
 }
 
@@ -7564,12 +7595,8 @@ footer .footer-social a i {
 
 .navigation-links a.page-numbers {
   text-decoration: none;
-  background: #424a4f;
-  padding: 5px 10px;
-  border: 2px solid #424a4f;
   display: inline;
   color: #ffffff;
-  border-radius: 4px;
   margin-bottom: 5px;
   display: inline-block;
 }
@@ -7580,7 +7607,8 @@ footer .footer-social a i {
 
 .navigation-links span.page-numbers,
 .navigation-links span.dots {
-  padding: 0 5px;
+  padding: 0 15px;
+  font-weight: bold;
 }
 
 /* ------------------------
@@ -7993,6 +8021,10 @@ footer .footer-social a i {
   border-bottom: 1px solid #7796b6;
 }
 
+.tmpl_type_rmg_archive .category-slide h2 {
+  margin-bottom: 60px;
+}
+
 .tmpl_type_rmg_archive .bna-group {
   width: 45%;
   margin-bottom: 20px;
@@ -8081,10 +8113,9 @@ footer .footer-social a i {
   position: relative;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 768px) {
   .tmpl_type_rmg_archive .img-set {
-    min-width: 500px;
-    max-width: 600px;
+    width: 600px;
   }
 }
 
@@ -8133,24 +8164,29 @@ footer .footer-social a i {
   margin-bottom: 80px;
 }
 
+@media only screen and (min-width: 768px) {
+  .tmpl_type_rmg_archive .single-case {
+    margin-bottom: 140px;
+  }
+}
+
 @media only screen and (min-width: 1080px) {
   .tmpl_type_rmg_archive .single-case {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 80px;
   }
 }
 
 .tmpl_type_rmg_archive .patient-details {
   text-align: left;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 1080px) {
   .tmpl_type_rmg_archive .patient-details {
     margin-top: 0px;
-    max-width: 700px;
+    width: calc(100% - 600px);
     margin-left: 40px;
   }
 }

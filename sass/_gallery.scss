@@ -12,6 +12,9 @@
 		margin-bottom: 50px;
 		padding-bottom: 50px;
 		border-bottom: 1px solid $primaryHighlight;
+		h2 {
+			margin-bottom: 60px;
+		}
 	}
 	.gallery-cat-wrap {
 
@@ -87,9 +90,8 @@
 			display: flex;
 			flex-wrap: wrap;
 			position: relative;
-			@include media($desktop) {
-			min-width: 500px;	
-			max-width: 600px;
+			@include media($tablet) {
+				width: 600px;
 			}
 			> div {
 				display: block;
@@ -136,9 +138,11 @@
 	.single-case {
 		// border: 1px solid red;
 		margin-bottom: 80px;
+		@include media($tablet) {
+			margin-bottom: 140px;
+		}
 		@include media($desktop) {
 			display: flex;
-			margin-bottom: 80px;
 		}
 	}
 
@@ -151,10 +155,10 @@
 	// }
 	.patient-details {
 		text-align: left;
-		margin-top: 40px;
+		margin-top: 20px;
 		@include media($desktop) {
 			margin-top: 0px;
-			max-width: 700px;
+			width: calc(100% - 600px);
 			margin-left: 40px;
 			// margin-top: -250px;
 		}

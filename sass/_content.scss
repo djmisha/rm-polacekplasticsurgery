@@ -12,12 +12,12 @@
 	strong {
 		// font-weight: 700;
 	}
-	a {
+	p a, li a{
 		text-decoration: underline;
 		// font-family: $primaryFont;
 		color: #5191b6;
 		&:hover {
-			text-decoration: underline !important;
+			text-decoration: underline;
 			color: $secondaryColor;
 		}
 	}
