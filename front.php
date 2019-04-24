@@ -148,7 +148,7 @@
 			<img src="<?php the_field('before_image'); ?>" alt="results before image">
 			<img src="<?php the_field('after_image'); ?>" alt="results after image">
 		</div>
-		<a href="<?php bloginfo('template_directory'); ?>/gallery/" class="button" rel="nofollow">Photo Gallery</a>
+		<a href="<?php bloginfo('url'); ?>/gallery/" class="button" rel="nofollow">Photo Gallery</a>
 	</div>	
 </section>	
 

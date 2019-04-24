@@ -280,17 +280,17 @@ body.inside {
 	background-repeat: no-repeat !important;
 	background-size: auto 350px  !important;
 	@include media($tablet) {
-		background-size: cover !important;
+	background-size: auto 450px  !important;
 	}
 	@include media($desktop) {
+		background-size: cover !important;
 		flex-direction: row-reverse;
 	}
 
 	.feature-image {
-		// border: 1px solid red;
 		min-height: 350px;
 		@include media($tablet) {
-			min-height: 400px;
+			min-height: 450px;
 		}
 		@include media($desktop) {
 			min-height: 450px;

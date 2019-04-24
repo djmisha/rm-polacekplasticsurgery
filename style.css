@@ -5388,12 +5388,13 @@ body.inside {
 
 @media only screen and (min-width: 768px) {
   .page-feature {
-    background-size: cover !important;
+    background-size: auto 450px  !important;
   }
 }
 
 @media only screen and (min-width: 1080px) {
   .page-feature {
+    background-size: cover !important;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
@@ -5407,7 +5408,7 @@ body.inside {
 
 @media only screen and (min-width: 768px) {
   .page-feature .feature-image {
-    min-height: 400px;
+    min-height: 450px;
   }
 }
 
@@ -5917,6 +5918,10 @@ footer .footer-address .loc-addy {
   line-height: 18px;
 }
 
+footer .footer-address .loc-addy a:hover {
+  text-decoration: none;
+}
+
 @media only screen and (min-width: 768px) {
   footer .footer-address .loc-addy {
     font-size: 17px;
@@ -5964,6 +5969,10 @@ footer .footer-address .loc-phone {
   footer .footer-address .loc-phone {
     font-size: 50px;
   }
+}
+
+footer .footer-address .loc-phone a:hover {
+  text-decoration: none;
 }
 
 footer .map-image {
