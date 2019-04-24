@@ -127,10 +127,11 @@
 			<?php the_field('home_reviews_content'); ?>
 		</div>
 	</div>
-	<div class="review-buttons">
+	<!-- <div class="review-buttons">
 		<a href="<?php the_field('read_more_reviews_button'); ?>" class="button" rel="nofollow">Read More Reviews</a>
 		<a href="<?php the_field('leave_your_review_button'); ?>" class="button" rel="nofollow">Leave Your Review</a>
 	</div>
+	 -->
 </section>
 
 

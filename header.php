@@ -47,7 +47,7 @@
 					<a href="<?php the_sub_field('map_link', 'option'); ?>" class="track-outbound head-address" data-label="Address - Header" target="_blank"  rel="noopener">
 						<i class="fas fa-map-marker-alt"></i>
 					</a>
-					<a href="<?php the_sub_field('phone_link'); ?>" class="head-phone track-outbound" data-label="Phone - Header"><i class="fas fa-mobile-alt"></i><?php the_sub_field('phone'); ?></a>
+					<a href="<?php the_sub_field('phone_link', 'option'); ?>" class="head-phone track-outbound" data-label="Phone - Header"><i class="fas fa-mobile-alt"></i><?php the_sub_field('phone'); ?></a>
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</div> 

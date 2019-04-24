@@ -5383,6 +5383,13 @@ body.inside {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   background-repeat: no-repeat !important;
+  background-size: auto 350px  !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-feature {
+    background-size: cover !important;
+  }
 }
 
 @media only screen and (min-width: 1080px) {
@@ -5391,7 +5398,6 @@ body.inside {
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
-    background-size: cover !important;
   }
 }
 
@@ -5400,6 +5406,12 @@ body.inside {
 }
 
 @media only screen and (min-width: 768px) {
+  .page-feature .feature-image {
+    min-height: 400px;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
   .page-feature .feature-image {
     min-height: 450px;
   }
@@ -6199,6 +6211,15 @@ footer .footer-social a i {
 
 .contact-us .address {
   width: 50%;
+}
+
+.contact-us .address a {
+  color: #5191b6;
+}
+
+.contact-us .address a:hover {
+  text-decoration: underline;
+  color: #e1ab4c;
 }
 
 .contact-us .the-hours {
@@ -7309,7 +7330,7 @@ footer .footer-social a i {
   .tmpl_type_category .content h2,
   .tmpl_type_archive .content h2,
   .tmpl_type_index .content h2 {
-    max-width: 950px;
+    max-width: 750px;
   }
 }
 
