@@ -14,7 +14,7 @@
 	        'post_type'     => $cat_cpt, #rmg-category
 	        'post_parent'   => 0, #first we get the parents
 	        'orderby'       => 'menu_order',
-	        'order'         => 'ASC'
+	        'order'         => 'DESC'
 	    );
 
 	    ?>

@@ -1,6 +1,8 @@
 
 <footer>
-	
+	<div class="care-credit">
+		We’re pleased to offer our patients the CareCredit® card, North America’s leading patient payment program. <a href="https://www.carecredit.com/doctor-locator/Medical-Esthetician-in-CRANSTON-RI-02920/Polacek-Center-for-Plastic-Surgery/?match_error=specialty" rel="noopener nofollow" target="_blank"><img src="<?php bloginfo('template_directory'); ?>/images/care-credit-logo.png" alt="care credit"></a>
+	</div>
 	<section class="upper-footer">
 
 		<div class="footer-logo">

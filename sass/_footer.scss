@@ -2,6 +2,35 @@
 =            Upper Footer            =
 ====================================*/
 
+.care-credit {
+	margin: 0 auto;
+	max-width: 1400px;
+	border-top: 1px solid $primaryHighlight;
+	padding-top: 40px;
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+	padding-left: 20px;
+	padding-right: 20px;
+	@include media($tablet) {
+		padding-left: 40px;
+		padding-right: 40px;
+		flex-direction: row;
+		text-align: left;
+		// width: 110px;
+	}
+	img {
+		margin-top: 20px;
+		@include media($tablet) {
+			margin-top: 0;
+			margin-left: 40px;
+			// margin-right: 40px;
+		}
+	}
+}
+
 /* Hide Footer on Contact Page */
 
 .contact .upper-footer, 
