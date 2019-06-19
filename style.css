@@ -4391,14 +4391,6 @@ main,
   }
 }
 
-@media only screen and (min-width: 1080px) {
-  .is--device section,
-  .is--device main,
-  .is--device .contain {
-    padding: 0 20px;
-  }
-}
-
 /* ***************************************** */
 /* --------------- Layouts ----------------- */
 /* ***************************************** */
@@ -4572,6 +4564,12 @@ main,
     padding-top: 0;
     margin-top: 70px;
     background-position: center center;
+  }
+}
+
+@media only screen and (min-width: 1080px) {
+  .is--ipad .int-header {
+    background-position: top right !important;
   }
 }
 

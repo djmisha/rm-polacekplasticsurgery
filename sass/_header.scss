@@ -118,6 +118,11 @@
 		margin-top: 70px;
 		background-position: center center;
 	}
+	@include media($desktop) {
+		.is--ipad & {
+			background-position: top right !important;
+		}
+	}
 }
 
 
